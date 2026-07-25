@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  a { color: #e0715c; }
+  a:hover { color: #c85338; }
+  /* hoverfx */
+  a, button { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, filter .2s ease; }
+  [style*="border-radius:100px"],[style*="border-radius: 100px"],button { cursor: pointer; }
+  [style*="border-radius:100px"]:hover,[style*="border-radius: 100px"]:hover,button:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 30px -10px rgba(26,20,64,0.55); }
+  [style*="border-radius:100px"]:active,[style*="border-radius: 100px"]:active,button:active { transform: translateY(-1px) scale(0.99); }
+  nav a:not([style*="border-radius:100px"]):not([style*="border-radius: 100px"]):hover { color: #e0715c !important; border-bottom-color: #e0715c !important; }
+  footer a:hover { color: #f7f0e4; }
+  /* button color swaps on hover — covers serialized rgb() (DC) + raw hex (standalone) */
+  a[style*="rgb(26, 20, 64)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#1a1440"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #e0715c !important; color: #fff !important; }
+  a[style*="rgb(47, 208, 198)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#2fd0c6"]:not(.bf-nav-link):not(.bf-logo-link):hover, button:hover { background: #1a1440 !important; color: #fff !important; }
+  a[style*="rgb(224, 113, 92)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#e0715c"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #c85338 !important; color: #fff !important; }
+  a[style*="rgb(245, 196, 81)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#f5c451"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #2fd0c6 !important; color: #0f3b3a !important; }
+  a[style*="3px solid rgb(26, 20, 64)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="border:3px solid #1a1440"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #1a1440 !important; color: #fff !important; }
+  a[style*="rgb(247, 240, 228)"][style*="1.5px"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="border:1.5px solid rgba(247,240,228"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: transparent !important; color: #fff !important; border: 3px solid #fff !important; }
+  @keyframes bfFloat { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-8px) rotate(2deg); } }
+</style>
+<script src="/image-slot.js"></script>
+</helmet>
+<div style="background:#f7f0e4;font-family:'Manrope',sans-serif;color:#1a1440;">
+  <dc-import name="SiteNav" active="impact" hint-size="100%,72px"></dc-import>
+
+  <!-- HERO -->
+  <div style="max-width:900px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px) 48px;text-align:center;">
+    <div style="display:inline-block;font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#fff;font-weight:700;background:linear-gradient(135deg,#4a1f63,#9c3a86,#e0715c);padding:8px 16px;border-radius:100px;margin-bottom:24px;">Our impact</div>
+    <h1 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(38px,7vw,60px);line-height:1.02;margin:0 0 18px;">Small flutters. <span style="font-style:italic;background:linear-gradient(135deg,#4a1f63,#9c3a86,#e0715c);-webkit-background-clip:text;background-clip:text;color:transparent;">Real change.</span></h1>
+    <p style="font-size:18px;line-height:1.65;color:#5c5470;margin:0 auto;max-width:560px;">We've donated over $320,000 to more than 500 causes around the world. Here are just a few of the organizations your generosity has touched.</p>
+  </div>
+
+  <!-- BIG STATS -->
+  <div style="max-width:1180px;margin:0 auto;padding:0 40px 20px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;">
+      <div style="background:#eae6f5;border-radius:24px;padding:30px 24px;text-align:center;"><div style="font-family:'DM Serif Display',serif;font-size:clamp(30px,5vw,42px);color:#1a1440;">5,386</div><div style="font-size:12px;color:#7a7490;font-weight:700;letter-spacing:0.04em;margin-top:4px;">BUTTERFLY DROPS</div></div>
+      <div style="background:#fbe4dd;border-radius:24px;padding:30px 24px;text-align:center;"><div style="font-family:'DM Serif Display',serif;font-size:clamp(30px,5vw,42px);color:#e0715c;">$320k</div><div style="font-size:12px;color:#a5756a;font-weight:700;letter-spacing:0.04em;margin-top:4px;">RAISED</div></div>
+      <div style="background:#f4dcec;border-radius:24px;padding:30px 24px;text-align:center;"><div style="font-family:'DM Serif Display',serif;font-size:clamp(30px,5vw,42px);color:#9c3a86;">500+</div><div style="font-size:12px;color:#9c3a86;font-weight:700;letter-spacing:0.04em;margin-top:4px;">CAUSES</div></div>
+      <div style="background:#e2ecfa;border-radius:24px;padding:30px 24px;text-align:center;"><div style="font-family:'DM Serif Display',serif;font-size:clamp(30px,5vw,42px);color:#5b8fd6;">28</div><div style="font-size:12px;color:#6d84a8;font-weight:700;letter-spacing:0.04em;margin-top:4px;">CITIES WORLDWIDE</div></div>
+    </div>
+  </div>
+
+  <!-- CAUSES -->
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,40px) 20px;">
+    <div style="text-align:center;margin-bottom:36px;">
+      <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(28px,5vw,40px);margin:0 0 8px;">Causes we've supported</h2>
+      <p style="font-size:15px;color:#8a8069;margin:0;font-family:'Space Grotesk',monospace;">A sample of 500+ organizations</p>
+    </div>
+    <div style="background:#fff;border:1px solid #efe6d4;border-radius:28px;padding:clamp(24px,4vw,40px);">
+      <img src="/assets/impact/causes-logos.png" alt="Logos of organizations the Butterfly Effect has partnered with and supported" style="display:block;width:100%;height:auto;">
+    </div>
+  </div>
+
+  <!-- QUOTE -->
+  <div style="background:linear-gradient(135deg,#4a1f63 0%,#9c3a86 46%,#e0715c 100%);color:#f7f0e4;margin-top:64px;">
+    <div style="max-width:820px;margin:0 auto;padding:clamp(48px,6vw,76px) clamp(20px,5vw,40px);text-align:center;">
+      <svg width="38" height="38" viewBox="0 0 32 32" fill="none" style="margin-bottom:20px;animation:bfFloat 6s ease-in-out infinite;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#9c3a86"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/></svg>
+      <p style="font-family:'DM Serif Display',serif;font-weight:400;font-style:italic;font-size:32px;line-height:1.4;margin:0 0 28px;">Every drop is a molecule of love — and together, they've become a movement felt in 28 cities around the world.</p>
+      <a href="/partner" style="display:inline-block;background:#2fd0c6;color:#0f3b3a;font-weight:800;font-size:16px;padding:16px 38px;border-radius:100px;text-decoration:none;">Add your ripple</a>
+    </div>
+  </div>
+
+  <dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

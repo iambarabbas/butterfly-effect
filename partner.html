@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  a { color: #e0715c; }
+  a:hover { color: #c85338; }
+  /* hoverfx */
+  a, button { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, filter .2s ease; }
+  [style*="border-radius:100px"],[style*="border-radius: 100px"],button { cursor: pointer; }
+  [style*="border-radius:100px"]:hover,[style*="border-radius: 100px"]:hover,button:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 30px -10px rgba(26,20,64,0.55); }
+  [style*="border-radius:100px"]:active,[style*="border-radius: 100px"]:active,button:active { transform: translateY(-1px) scale(0.99); }
+  nav a:not([style*="border-radius:100px"]):not([style*="border-radius: 100px"]):hover { color: #e0715c !important; border-bottom-color: #e0715c !important; }
+  footer a:hover { color: #f7f0e4; }
+  /* button color swaps on hover — covers serialized rgb() (DC) + raw hex (standalone) */
+  a[style*="rgb(26, 20, 64)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#1a1440"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #e0715c !important; color: #fff !important; }
+  a[style*="rgb(47, 208, 198)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#2fd0c6"]:not(.bf-nav-link):not(.bf-logo-link):hover, button:hover { background: #1a1440 !important; color: #fff !important; }
+  a[style*="rgb(224, 113, 92)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#e0715c"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #c85338 !important; color: #fff !important; }
+  a[style*="rgb(245, 196, 81)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#f5c451"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #2fd0c6 !important; color: #0f3b3a !important; }
+  a[style*="3px solid rgb(26, 20, 64)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="border:3px solid #1a1440"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #1a1440 !important; color: #fff !important; }
+  a[style*="rgb(247, 240, 228)"][style*="1.5px"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="border:1.5px solid rgba(247,240,228"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: transparent !important; color: #fff !important; border: 3px solid #fff !important; }
+</style>
+<script src="/image-slot.js"></script>
+</helmet>
+<div style="background:#f7f0e4;font-family:'Manrope',sans-serif;color:#1a1440;">
+  <dc-import name="SiteNav" active="partner" hint-size="100%,72px"></dc-import>
+
+  <!-- HERO -->
+  <div style="max-width:900px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px) 44px;text-align:center;">
+    <div style="display:inline-block;font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#fff;font-weight:700;background:linear-gradient(135deg,#4a1f63,#9c3a86,#e0715c);padding:8px 16px;border-radius:100px;margin-bottom:24px;">Partner with us</div>
+    <h1 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(38px,7vw,60px);line-height:1.02;margin:0 0 18px;">Reimagining philanthropy, together.</h1>
+    <p style="font-size:18px;line-height:1.65;color:#5c5470;margin:0 auto 30px;max-width:560px;">The Butterfly Effect partners with schools, communities and companies around the world to make giving an easy, fun and social experience.</p>
+    <a href="https://host.nxt.blackbaud.com/donor-form?svcid=tcs&formId=2b6a6427-01c4-475f-8a79-2d080efff10a&envid=p-wtQWRZCKDku-ywCZNtB1yg&zone=usa" target="_blank" style="display:inline-block;background:#1a1440;color:#fff;font-weight:800;font-size:16px;padding:17px 38px;border-radius:100px;text-decoration:none;">Donate &amp; partner now</a>
+  </div>
+
+  <!-- PARTNER TYPES -->
+  <div style="max-width:1180px;margin:0 auto;padding:44px 40px 20px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;">
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:26px;overflow:hidden;box-shadow:0 16px 34px -26px rgba(26,20,64,0.5);">
+        <div style="background:#eae6f5;padding:26px 28px;"><div style="font-family:'Space Grotesk',monospace;font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:#5b8fd6;font-weight:700;">Up to $1,000</div><div style="font-family:'DM Serif Display',serif;font-size:28px;margin-top:6px;">School Partners</div></div>
+        <div style="padding:24px 28px 28px;"><p style="font-size:14.5px;line-height:1.65;color:#5c5470;margin:0 0 14px;">From Florida to Washington, dozens of schools teach self-directed philanthropy through a month-long Social Butterfly campaign — raising $1,000 from our Foundation.</p><p style="font-size:14px;line-height:1.6;color:#8a8069;margin:0;font-style:italic;">“Everything we do matters and touches others” — a message with lasting power on young lives.</p></div>
+      </div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:26px;overflow:hidden;box-shadow:0 16px 34px -26px rgba(26,20,64,0.5);">
+        <div style="background:#fbe4dd;padding:26px 28px;"><div style="font-family:'Space Grotesk',monospace;font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:#e0715c;font-weight:700;">Up to $2,000</div><div style="font-family:'DM Serif Display',serif;font-size:28px;margin-top:6px;">Community Partners</div></div>
+        <div style="padding:24px 28px 28px;"><p style="font-size:14.5px;line-height:1.65;color:#5c5470;margin:0 0 14px;">From Green Bay to Houston, communities beautify streetscapes with their own Social Butterfly mural and run a month-long campaign for up to $2,000.</p><p style="font-size:14px;line-height:1.6;color:#8a8069;margin:0;font-style:italic;">A creative way to activate idle areas for positive, social changemaking.</p></div>
+      </div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:26px;overflow:hidden;box-shadow:0 16px 34px -26px rgba(26,20,64,0.5);">
+        <div style="background:#f4dcec;padding:26px 28px;"><div style="font-family:'Space Grotesk',monospace;font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:#9c3a86;font-weight:700;">Bespoke</div><div style="font-family:'DM Serif Display',serif;font-size:28px;margin-top:6px;">Corporate Partners</div></div>
+        <div style="padding:24px 28px 28px;"><p style="font-size:14.5px;line-height:1.65;color:#5c5470;margin:0 0 14px;">Companies like Mall of America and the American Cancer Society use installations and Drop campaigns to engage employees and further their mission.</p><p style="font-size:14px;line-height:1.6;color:#8a8069;margin:0;font-style:italic;">Includes murals, best practices, and Tasha Wahl's keynote engagement.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTABLE PARTNERS -->
+  <div style="max-width:1180px;margin:0 auto;padding:60px 40px 20px;text-align:center;">
+    <div style="font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#8a8069;margin-bottom:22px;">Trusted by partners like</div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;">
+      <span style="background:#fff;border:1px solid #efe6d4;border-radius:100px;padding:12px 24px;font-weight:700;font-size:15px;color:#3a3358;">Mall of America</span>
+      <span style="background:#fff;border:1px solid #efe6d4;border-radius:100px;padding:12px 24px;font-weight:700;font-size:15px;color:#3a3358;">American Cancer Society</span>
+      <span style="background:#fff;border:1px solid #efe6d4;border-radius:100px;padding:12px 24px;font-weight:700;font-size:15px;color:#3a3358;">Relay For Life</span>
+      <span style="background:#fff;border:1px solid #efe6d4;border-radius:100px;padding:12px 24px;font-weight:700;font-size:15px;color:#3a3358;">Serra High School</span>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="background:linear-gradient(135deg,#4a1f63 0%,#9c3a86 46%,#e0715c 100%);color:#f7f0e4;margin-top:64px;">
+    <div style="max-width:760px;margin:0 auto;padding:clamp(48px,6vw,76px) clamp(20px,5vw,40px);text-align:center;">
+      <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(30px,5vw,44px);line-height:1.08;margin:0 0 14px;">Become part of the movement</h2>
+      <p style="font-size:16px;color:rgba(247,240,228,0.8);margin:0 auto 30px;max-width:520px;">Interested in becoming a School, Community or Corporate Partner? We'd love to hear from you.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://host.nxt.blackbaud.com/donor-form?svcid=tcs&formId=2b6a6427-01c4-475f-8a79-2d080efff10a&envid=p-wtQWRZCKDku-ywCZNtB1yg&zone=usa" target="_blank" style="background:#2fd0c6;color:#0f3b3a;font-weight:800;font-size:16px;padding:17px 34px;border-radius:100px;text-decoration:none;">Donate &amp; partner now</a>
+        <a href="mailto:tashawahl@me.com" style="background:transparent;border:1.5px solid rgba(247,240,228,0.4);color:#f7f0e4;font-weight:700;font-size:16px;padding:17px 30px;border-radius:100px;text-decoration:none;">Email us</a>
+      </div>
+    </div>
+  </div>
+
+  <dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

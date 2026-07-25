@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  a { color: #e0715c; }
+  a:hover { color: #c85338; }
+  /* hoverfx */
+  a, button { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, filter .2s ease; }
+  [style*="border-radius:100px"],[style*="border-radius: 100px"],button { cursor: pointer; }
+  [style*="border-radius:100px"]:hover,[style*="border-radius: 100px"]:hover,button:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 30px -10px rgba(26,20,64,0.55); }
+  [style*="border-radius:100px"]:active,[style*="border-radius: 100px"]:active,button:active { transform: translateY(-1px) scale(0.99); }
+  nav a:not([style*="border-radius:100px"]):not([style*="border-radius: 100px"]):hover { color: #e0715c !important; border-bottom-color: #e0715c !important; }
+  footer a:hover { color: #f7f0e4; }
+  /* button color swaps on hover — covers serialized rgb() (DC) + raw hex (standalone) */
+  a[style*="rgb(26, 20, 64)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#1a1440"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #e0715c !important; color: #fff !important; }
+  a[style*="rgb(47, 208, 198)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#2fd0c6"]:not(.bf-nav-link):not(.bf-logo-link):hover, button:hover { background: #1a1440 !important; color: #fff !important; }
+  a[style*="rgb(224, 113, 92)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#e0715c"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #c85338 !important; color: #fff !important; }
+  a[style*="rgb(245, 196, 81)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#f5c451"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #2fd0c6 !important; color: #0f3b3a !important; }
+  a[style*="3px solid rgb(26, 20, 64)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="border:3px solid #1a1440"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #1a1440 !important; color: #fff !important; }
+  a[style*="rgb(247, 240, 228)"][style*="1.5px"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="border:1.5px solid rgba(247,240,228"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: transparent !important; color: #fff !important; border: 3px solid #fff !important; }
+</style>
+<script src="/image-slot.js"></script>
+<script src="/drops-data.js"></script>
+</helmet>
+<div style="background:#f7f0e4;font-family:'Manrope',sans-serif;color:#1a1440;">
+  <dc-import name="SiteNav" active="drops" hint-size="100%,72px"></dc-import>
+
+  <!-- HERO -->
+  <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:52px;align-items:center;padding:clamp(40px,6vw,64px) clamp(20px,5vw,40px) 56px;">
+    <div>
+      <div style="display:inline-block;font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#fff;font-weight:700;background:linear-gradient(135deg,#4a1f63,#9c3a86,#e0715c);padding:8px 16px;border-radius:100px;margin-bottom:24px;">The original spark · since 2013</div>
+      <h1 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(40px,8vw,66px);line-height:0.98;margin:0 0 20px;">Butterfly Drops</h1>
+      <p style="font-size:18px;line-height:1.65;color:#5c5470;margin:0 0 30px;max-width:470px;">A small paper butterfly, left in the world for a stranger to find. When they find it, we make a donation in their name — an unexpected, joyful molecule of love set loose.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="/contact" style="background:#1a1440;color:#fff;font-weight:800;font-size:16px;padding:16px 30px;border-radius:100px;text-decoration:none;">Sponsor a drop</a>
+        <a href="#recent" style="background:transparent;border:3px solid #1a1440;color:#1a1440;font-weight:700;font-size:16px;padding:16px 26px;border-radius:100px;text-decoration:none;">See recent drops</a>
+      </div>
+    </div>
+    <div style="position:relative;height:460px;border-radius:30px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(26,20,64,0.55);">
+      <image-slot id="bd-hero" shape="rect" placeholder="Butterfly Drop in the wild" style="position:absolute;inset:0;"></image-slot>
+    </div>
+  </div>
+
+  <!-- COUNTER STRIP -->
+  <div style="background:#1a1440;color:#f7f0e4;">
+    <div style="max-width:1180px;margin:0 auto;padding:40px;display:flex;justify-content:space-around;flex-wrap:wrap;gap:24px;text-align:center;">
+      <div><div style="font-family:'DM Serif Display',serif;font-size:clamp(30px,5vw,44px);color:#f5c451;">5,386</div><div style="font-size:12px;letter-spacing:0.08em;color:rgba(247,240,228,0.6);margin-top:4px;">DROPS GLOBALLY</div></div>
+      <div><div style="font-family:'DM Serif Display',serif;font-size:clamp(30px,5vw,44px);color:#e0715c;">28</div><div style="font-size:12px;letter-spacing:0.08em;color:rgba(247,240,228,0.6);margin-top:4px;">COUNTRIES &amp; CITIES</div></div>
+      <div><div style="font-family:'DM Serif Display',serif;font-size:clamp(30px,5vw,44px);color:#5b8fd6;">500+</div><div style="font-size:12px;letter-spacing:0.08em;color:rgba(247,240,228,0.6);margin-top:4px;">CAUSES SUPPORTED</div></div>
+    </div>
+  </div>
+
+  <!-- HOW -->
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px) 20px;">
+    <div style="text-align:center;margin-bottom:44px;">
+      <div style="font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#e0715c;font-weight:700;margin-bottom:12px;">How a drop works</div>
+      <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(30px,5vw,42px);margin:0;">Three steps to start a ripple</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;">
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:22px;padding:30px 26px;"><div style="font-family:'DM Serif Display',serif;font-size:28px;color:#e0715c;">01</div><div style="font-weight:800;font-size:17px;margin:10px 0 8px;">Get your butterfly</div><p style="font-size:14.5px;color:#5c5470;margin:0;line-height:1.6;">Sponsor a drop and we send a butterfly plus simple instructions to leave it behind.</p></div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:22px;padding:30px 26px;"><div style="font-family:'DM Serif Display',serif;font-size:28px;color:#9c3a86;">02</div><div style="font-weight:800;font-size:17px;margin:10px 0 8px;">Drop it in the wild</div><p style="font-size:14.5px;color:#5c5470;margin:0;line-height:1.6;">Leave it somewhere a stranger will find it — a café, a park bench, a library shelf.</p></div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:22px;padding:30px 26px;"><div style="font-family:'DM Serif Display',serif;font-size:28px;color:#5b8fd6;">03</div><div style="font-weight:800;font-size:17px;margin:10px 0 8px;">Watch it flutter</div><p style="font-size:14.5px;color:#5c5470;margin:0;line-height:1.6;">The finder logs it online, we donate in their name, and the ripple carries on.</p></div>
+    </div>
+  </div>
+
+  <!-- RECENT DROPS -->
+  <div id="recent" style="max-width:1240px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,40px) 20px;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px;flex-wrap:wrap;gap:12px;">
+      <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:36px;margin:0;">The drop archive</h2>
+      <span style="font-size:13px;color:#8a8069;font-family:'Space Grotesk',monospace;">{{ countLabel }}</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;">
+      <sc-for list="{{ drops }}" as="d" hint-placeholder-count="8">
+        <div style="background:#fff;border:1px solid #efe6d4;border-radius:20px;overflow:hidden;">
+          <div style="position:relative;height:200px;">
+            <sc-if value="{{ d.hasImage }}">
+              <img src="{{ d.img }}" alt="{{ d.alt }}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+            </sc-if>
+            <sc-if value="{{ d.noImage }}">
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#f7f0e4;color:#c9bfa3;font-family:'DM Serif Display',serif;font-size:15px;">No photo on file</div>
+            </sc-if>
+            <span style="position:absolute;top:12px;left:12px;background:#e0715c;color:#fff;font-size:11px;font-weight:800;padding:5px 11px;border-radius:100px;">DROP #{{ d.n }}</span>
+          </div>
+          <div style="padding:16px 18px;"><div style="font-family:'DM Serif Display',serif;font-size:19px;">{{ d.l }}</div></div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:18px;margin-top:36px;">
+      <button onclick="{{ prevPage }}" style="{{ prevBtnStyle }}" aria-label="Previous drops">&#8592;</button>
+      <span style="font-family:'Space Grotesk',monospace;font-size:13px;color:#8a8069;min-width:110px;text-align:center;">{{ pageLabel }}</span>
+      <button onclick="{{ nextPage }}" style="{{ nextBtnStyle }}" aria-label="Next drops">&#8594;</button>
+    </div>
+  </div>
+
+  <!-- SPONSOR TIERS -->
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px) 20px;">
+    <div style="text-align:center;margin-bottom:40px;">
+      <div style="font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#e0715c;font-weight:700;margin-bottom:12px;">Sponsor a drop</div>
+      <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(30px,5vw,42px);margin:0 0 10px;">Give the gift of giving</h2>
+      <p style="font-size:16px;color:#5c5470;margin:0 auto;max-width:560px;line-height:1.6;">We provide the butterfly and drop instructions. Once it's found, we handle the donation in the finder's name.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;">
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:24px;padding:34px 28px;text-align:center;"><div style="font-family:'DM Serif Display',serif;font-size:clamp(30px,5vw,44px);color:#1a1440;">$50</div><div style="font-weight:800;font-size:15px;margin:8px 0 10px;color:#e0715c;">One butterfly</div><p style="font-size:14px;color:#5c5470;margin:0;line-height:1.6;">A single drop kit to spark one act of kindness.</p></div>
+      <div style="background:#1a1440;color:#f7f0e4;border-radius:24px;padding:34px 28px;text-align:center;position:relative;box-shadow:0 24px 44px -26px rgba(26,20,64,0.7);"><span style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#2fd0c6;color:#0f3b3a;font-size:11px;font-weight:800;padding:5px 14px;border-radius:100px;">MOST POPULAR</span><div style="font-family:'DM Serif Display',serif;font-size:clamp(30px,5vw,44px);color:#f5c451;">$100</div><div style="font-weight:800;font-size:15px;margin:8px 0 10px;color:#e0715c;">A flutter of butterflies</div><p style="font-size:14px;color:rgba(247,240,228,0.78);margin:0;line-height:1.6;">A small set of drops — perfect as a memorable gift.</p></div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:24px;padding:34px 28px;text-align:center;"><div style="font-family:'DM Serif Display',serif;font-size:clamp(30px,5vw,44px);color:#1a1440;">$250</div><div style="font-weight:800;font-size:15px;margin:8px 0 10px;color:#e0715c;">A swarm</div><p style="font-size:14px;color:#5c5470;margin:0;line-height:1.6;">Enough butterflies to start a ripple across a whole community.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:34px;">
+      <a href="/contact" style="background:#e0715c;color:#fff;font-weight:800;font-size:16px;padding:17px 38px;border-radius:100px;text-decoration:none;">Order a drop kit</a>
+    </div>
+  </div>
+  <div style="height:76px;"></div>
+
+  <dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.pageSize = 8;
+    this.state = { page: 0 };
+  }
+  renderVals() {
+    const all = window.BUTTERFLY_DROPS || [];
+    const totalPages = Math.max(1, Math.ceil(all.length / this.pageSize));
+    const page = Math.min(this.state.page, totalPages - 1);
+    const start = page * this.pageSize;
+    const drops = all.slice(start, start + this.pageSize).map((d) => ({
+      n: d.n,
+      l: d.l,
+      alt: 'Drop #' + d.n,
+      hasImage: !!d.i,
+      noImage: !d.i,
+      img: d.i || '',
+    }));
+    const btnBase = {
+      width: '44px', height: '44px', borderRadius: '50%', border: 'none',
+      background: '#1a1440', color: '#fff', fontSize: '18px',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      flexShrink: 0,
+    };
+    return {
+      drops,
+      countLabel: all.length + ' total drops',
+      pageLabel: 'Page ' + (page + 1) + ' of ' + totalPages,
+      prevBtnStyle: Object.assign({}, btnBase, {
+        opacity: page <= 0 ? 0.35 : 1,
+        cursor: page <= 0 ? 'default' : 'pointer',
+        pointerEvents: page <= 0 ? 'none' : 'auto',
+      }),
+      nextBtnStyle: Object.assign({}, btnBase, {
+        opacity: page >= totalPages - 1 ? 0.35 : 1,
+        cursor: page >= totalPages - 1 ? 'default' : 'pointer',
+        pointerEvents: page >= totalPages - 1 ? 'none' : 'auto',
+      }),
+      prevPage: () => this.setState({ page: Math.max(0, page - 1) }),
+      nextPage: () => this.setState({ page: Math.min(totalPages - 1, page + 1) }),
+    };
+  }
+}
+</script>
+</body>
+</html>

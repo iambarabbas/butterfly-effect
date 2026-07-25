@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  a { color: #e0715c; }
+  a:hover { color: #c85338; }
+  /* hoverfx */
+  a, button { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, filter .2s ease; }
+  [style*="border-radius:100px"],[style*="border-radius: 100px"],button { cursor: pointer; }
+  [style*="border-radius:100px"]:hover,[style*="border-radius: 100px"]:hover,button:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 30px -10px rgba(26,20,64,0.55); }
+  [style*="border-radius:100px"]:active,[style*="border-radius: 100px"]:active,button:active { transform: translateY(-1px) scale(0.99); }
+  nav a:not([style*="border-radius:100px"]):not([style*="border-radius: 100px"]):hover { color: #e0715c !important; border-bottom-color: #e0715c !important; }
+  footer a:hover { color: #f7f0e4; }
+  /* button color swaps on hover — covers serialized rgb() (DC) + raw hex (standalone) */
+  a[style*="rgb(26, 20, 64)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#1a1440"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #e0715c !important; color: #fff !important; }
+  a[style*="rgb(47, 208, 198)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#2fd0c6"]:not(.bf-nav-link):not(.bf-logo-link):hover, button:hover { background: #1a1440 !important; color: #fff !important; }
+  a[style*="rgb(224, 113, 92)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#e0715c"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #c85338 !important; color: #fff !important; }
+  a[style*="rgb(245, 196, 81)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#f5c451"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #2fd0c6 !important; color: #0f3b3a !important; }
+  a[style*="3px solid rgb(26, 20, 64)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="border:3px solid #1a1440"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #1a1440 !important; color: #fff !important; }
+  a[style*="rgb(247, 240, 228)"][style*="1.5px"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="border:1.5px solid rgba(247,240,228"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: transparent !important; color: #fff !important; border: 3px solid #fff !important; }
+  @keyframes bfFloat { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-8px) rotate(2deg); } }
+  @keyframes bfRipple { 0% { transform: scale(0.6); opacity: 0.55; } 100% { transform: scale(2.4); opacity: 0; } }
+  @keyframes bfFlap { 0%,100% { transform: scaleX(1); } 50% { transform: scaleX(0.5); } }
+  @keyframes bfDrift { 0% { transform: translate(0,0) rotate(-3deg); } 25% { transform: translate(7px,-11px) rotate(3deg); } 50% { transform: translate(15px,-3px) rotate(-2deg); } 75% { transform: translate(5px,-13px) rotate(4deg); } 100% { transform: translate(0,0) rotate(-3deg); } }
+  @keyframes bfPing { 0% { transform: scale(0.4); opacity: 0.7; } 100% { transform: scale(3); opacity: 0; } }
+  @keyframes bfFadeIn { from { opacity: 0; } to { opacity: 1; } }
+</style>
+<script src="/image-slot.js"></script>
+</helmet>
+<div style="background:#f7f0e4;font-family:'Manrope',sans-serif;color:#1a1440;">
+  <dc-import name="SiteNav" active="" hint-size="100%,72px"></dc-import>
+
+  <!-- HERO -->
+  <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,52px);align-items:center;padding:clamp(36px,6vw,64px) clamp(20px,5vw,40px) clamp(48px,6vw,60px);">
+    <div>
+      <div style="display:inline-block;font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#fff;font-weight:700;background:linear-gradient(135deg,#4a1f63,#9c3a86,#e0715c);padding:8px 16px;border-radius:100px;margin-bottom:26px;">Grassroots philanthropy · since 2013</div>
+      <h1 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(42px,8vw,76px);line-height:0.98;margin:0 0 22px;">Be the <span style="font-style:italic;background:linear-gradient(135deg,#4a1f63,#9c3a86,#e0715c);-webkit-background-clip:text;background-clip:text;color:transparent;">change</span> you want to see.</h1>
+      <p style="font-size:18px;line-height:1.6;color:#5c5470;margin:0 0 30px;max-width:470px;">The Butterfly Effect is a movement redefining generosity one flutter at a time — small, joyful acts of kindness that ripple outward into real, lasting change.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px;">
+        <a href="/about" style="background:#1a1440;color:#fff;font-weight:800;font-size:16px;padding:17px 30px;border-radius:100px;text-decoration:none;">Learn the story</a>
+        <a href="/media" style="display:flex;align-items:center;gap:9px;background:transparent;border:3px solid #1a1440;color:#1a1440;font-weight:700;font-size:16px;padding:17px 26px;border-radius:100px;text-decoration:none;"><svg width="14" height="14" viewBox="0 0 16 16" fill="#1a1440"><path d="M4 2.5v11l9-5.5z"/></svg> Watch the film</a>
+      </div>
+      <div style="display:flex;gap:40px;border-top:1px solid #e6dcc9;padding-top:26px;flex-wrap:wrap;">
+        <div><div style="font-family:'DM Serif Display',serif;font-size:36px;color:#1a1440;">5,386</div><div style="font-size:12px;color:#7a7490;font-weight:700;letter-spacing:0.04em;margin-top:2px;">DROPS GLOBALLY</div></div>
+        <div><div style="font-family:'DM Serif Display',serif;font-size:36px;color:#e0715c;">$320k</div><div style="font-size:12px;color:#a5756a;font-weight:700;letter-spacing:0.04em;margin-top:2px;">RAISED</div></div>
+        <div><div style="font-family:'DM Serif Display',serif;font-size:36px;color:#9c3a86;">500+</div><div style="font-size:12px;color:#9c3a86;font-weight:700;letter-spacing:0.04em;margin-top:2px;">CAUSES</div></div>
+      </div>
+    </div>
+    <div style="position:relative;height:520px;border-radius:30px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(26,20,64,0.55);">
+      <image-slot id="home-hero" src="uploads/Screenshot-2024-06-20-at-1.23.34-PM.png" shape="rect" placeholder="Social Butterfly installation" style="position:absolute;inset:0;"></image-slot>
+      <div style="position:absolute;left:20px;bottom:20px;background:rgba(247,240,228,0.94);backdrop-filter:blur(6px);border-radius:16px;padding:14px 18px;display:flex;align-items:center;gap:13px;">
+        <div style="font-family:'DM Serif Display',serif;font-size:30px;color:#e0715c;line-height:1;">100+</div>
+        <div style="font-size:12.5px;line-height:1.3;color:#5c5470;font-weight:600;">Social Butterflies in<br>28 cities worldwide</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <div style="background:linear-gradient(135deg,#4a1f63 0%,#9c3a86 46%,#e0715c 100%);">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,4vw,56px);align-items:center;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px);">
+      <div>
+        <div style="font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#2fd0c6;font-weight:700;margin-bottom:18px;">The idea</div>
+        <p style="font-family:'DM Serif Display',serif;font-weight:400;font-style:italic;font-size:34px;line-height:1.3;margin:0 0 22px;color:#fff;">The softest flutter of a wing can set off a chain reaction that produces major change.</p>
+        <p style="font-size:16px;line-height:1.7;color:rgba(247,240,228,0.85);margin:0 0 24px;">Artist and entrepreneur Tasha Wahl fused Gandhi's timeless call to “be the change” with Edward Lorenz's Butterfly Effect theory — and built a worldwide movement of contagious generosity through interactive art.</p>
+        <a href="/about" style="font-weight:700;font-size:15px;color:#2fd0c6;text-decoration:none;">Meet the founder →</a>
+      </div>
+      <div style="position:relative;height:420px;border-radius:26px;overflow:hidden;box-shadow:0 24px 44px -26px rgba(26,20,64,0.5);">
+        <image-slot id="home-story" src="uploads/Screenshot-2024-06-28-at-5.44.58-PM-1024x663.png" shape="rect" placeholder="Tasha Wahl speaking" style="position:absolute;inset:0;"></image-slot>
+        <div style="position:absolute;left:18px;bottom:18px;background:rgba(26,20,64,0.86);backdrop-filter:blur(4px);border-radius:12px;padding:9px 14px;color:#f7f0e4;font-size:12.5px;font-weight:600;">Tasha Wahl · Founder &amp; Idea Creator</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROGRAMS -->
+  <div style="background:#fff;">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,76px) clamp(20px,5vw,40px) clamp(48px,7vw,76px);">
+    <div style="text-align:center;margin-bottom:38px;">
+      <div style="font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#e0715c;font-weight:700;margin-bottom:12px;">How we give</div>
+      <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(32px,5vw,44px);margin:0;">Two ways to flutter</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
+      <a href="/butterfly-drops" style="text-decoration:none;color:inherit;background:#f7f0e4;border:1px solid #efe6d4;border-radius:26px;overflow:hidden;box-shadow:0 16px 34px -26px rgba(26,20,64,0.5);display:block;">
+        <div style="position:relative;height:250px;"><image-slot id="home-drops" src="uploads/Screenshot 2026-07-20 at 9.27.30 AM.png" shape="rect" placeholder="Butterfly Drop" style="position:absolute;inset:0;"></image-slot></div>
+        <div style="padding:26px 28px 28px;">
+          <div style="font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:#e0715c;font-weight:700;">Give unexpectedly</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:30px;margin:4px 0 8px;">Butterfly Drops</div>
+          <p style="font-size:15px;color:#5c5470;margin:0 0 14px;line-height:1.6;">Random acts of kindness left in the world for strangers to find — the movement's original spark.</p>
+          <span style="font-weight:700;font-size:14.5px;color:#e0715c;">Explore drops →</span>
+        </div>
+      </a>
+      <a href="/social-butterflies" style="text-decoration:none;color:inherit;background:#f7f0e4;border:1px solid #efe6d4;border-radius:26px;overflow:hidden;box-shadow:0 16px 34px -26px rgba(26,20,64,0.5);display:block;">
+        <div style="position:relative;height:250px;"><image-slot id="home-social" src="uploads/Screenshot-2024-06-20-at-1.23.34-PM.png" shape="rect" placeholder="Social Butterfly installation" style="position:absolute;inset:0;"></image-slot></div>
+        <div style="padding:26px 28px 28px;">
+          <div style="font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:#9c3a86;font-weight:700;">Give together</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:30px;margin:4px 0 8px;">Social Butterflies</div>
+          <p style="font-size:15px;color:#5c5470;margin:0 0 14px;line-height:1.6;">Interactive public art installations that fan waves of social-media giving for causes worldwide.</p>
+          <span style="font-weight:700;font-size:14.5px;color:#9c3a86;">Explore installations →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+  </div>
+
+  <!-- DROPS MAP -->
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(52px,7vw,84px) clamp(20px,5vw,40px) 20px;">
+    <div style="text-align:center;margin-bottom:34px;">
+      <div style="font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#e0715c;font-weight:700;margin-bottom:12px;">Drops around the world</div>
+      <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(32px,5vw,44px);margin:0 0 12px;">A movement without borders</h2>
+      <p style="font-size:16px;color:#5c5470;margin:0 auto;max-width:520px;line-height:1.6;">From San Diego to Tokyo — 5,386 butterflies dropped across 28 cities, and every one sets off a new ripple.</p>
+    </div>
+    <div style="position:relative;background:#fff;border:1px solid #efe6d4;border-radius:28px;padding:26px 26px 22px;box-shadow:0 24px 50px -30px rgba(26,20,64,0.4);">
+      <div style="position:relative;width:100%;">
+        <img src="/assets/world-dotmap.png" alt="World map of butterfly drop locations" style="width:100%;display:block;">
+        <!-- pulsing pings -->
+        <span style="position:absolute;left:20.31%;top:29.71%;width:15px;height:15px;margin:-7.5px;border-radius:50%;background:rgba(224,113,92,0.45);animation:bfPing 2.6s ease-out infinite;"></span>
+        <span style="position:absolute;left:31.82%;top:24.75%;width:15px;height:15px;margin:-7.5px;border-radius:50%;background:rgba(91,143,214,0.45);animation:bfPing 2.6s ease-out infinite 0.6s;"></span>
+        <span style="position:absolute;left:23.99%;top:37.97%;width:15px;height:15px;margin:-7.5px;border-radius:50%;background:rgba(224,113,92,0.45);animation:bfPing 2.6s ease-out infinite 1.1s;"></span>
+        <span style="position:absolute;left:37.87%;top:64.59%;width:15px;height:15px;margin:-7.5px;border-radius:50%;background:rgba(91,143,214,0.45);animation:bfPing 2.6s ease-out infinite 1.6s;"></span>
+        <span style="position:absolute;left:49.97%;top:18.2%;width:15px;height:15px;margin:-7.5px;border-radius:50%;background:rgba(224,113,92,0.45);animation:bfPing 2.6s ease-out infinite 0.3s;"></span>
+        <span style="position:absolute;left:59.83%;top:50.8%;width:15px;height:15px;margin:-7.5px;border-radius:50%;background:rgba(91,143,214,0.45);animation:bfPing 2.6s ease-out infinite 1.9s;"></span>
+        <span style="position:absolute;left:85.03%;top:27.87%;width:15px;height:15px;margin:-7.5px;border-radius:50%;background:rgba(224,113,92,0.45);animation:bfPing 2.6s ease-out infinite 0.9s;"></span>
+        <span style="position:absolute;left:88.17%;top:71.01%;width:15px;height:15px;margin:-7.5px;border-radius:50%;background:rgba(91,143,214,0.45);animation:bfPing 2.6s ease-out infinite 2.2s;"></span>
+        <!-- fluttering butterflies -->
+        <span style="position:absolute;left:20.31%;top:29.71%;margin:-11px;animation:bfDrift 7s ease-in-out infinite;"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" style="display:block;transform-origin:center;animation:bfFlap 0.5s ease-in-out infinite;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#9c3a86"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/><rect x="15.4" y="8" width="1.2" height="16" rx="0.6" fill="#1a1440"/></svg></span>
+        <span style="position:absolute;left:31.82%;top:24.75%;margin:-10px;animation:bfDrift 8s ease-in-out infinite 0.8s;"><svg width="20" height="20" viewBox="0 0 32 32" fill="none" style="display:block;transform-origin:center;animation:bfFlap 0.6s ease-in-out infinite 0.2s;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#9c3a86"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/><rect x="15.4" y="8" width="1.2" height="16" rx="0.6" fill="#1a1440"/></svg></span>
+        <span style="position:absolute;left:23.99%;top:37.97%;margin:-9.5px;animation:bfDrift 9s ease-in-out infinite 1.4s;"><svg width="19" height="19" viewBox="0 0 32 32" fill="none" style="display:block;transform-origin:center;animation:bfFlap 0.55s ease-in-out infinite 0.1s;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#9c3a86"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/><rect x="15.4" y="8" width="1.2" height="16" rx="0.6" fill="#1a1440"/></svg></span>
+        <span style="position:absolute;left:37.87%;top:64.59%;margin:-10px;animation:bfDrift 8.5s ease-in-out infinite 0.4s;"><svg width="20" height="20" viewBox="0 0 32 32" fill="none" style="display:block;transform-origin:center;animation:bfFlap 0.5s ease-in-out infinite 0.3s;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#9c3a86"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/><rect x="15.4" y="8" width="1.2" height="16" rx="0.6" fill="#1a1440"/></svg></span>
+        <span style="position:absolute;left:49.97%;top:18.2%;margin:-10.5px;animation:bfDrift 7.5s ease-in-out infinite 1s;"><svg width="21" height="21" viewBox="0 0 32 32" fill="none" style="display:block;transform-origin:center;animation:bfFlap 0.6s ease-in-out infinite;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#9c3a86"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/><rect x="15.4" y="8" width="1.2" height="16" rx="0.6" fill="#1a1440"/></svg></span>
+        <span style="position:absolute;left:85.03%;top:27.87%;margin:-9px;animation:bfDrift 9s ease-in-out infinite 1.8s;"><svg width="18" height="18" viewBox="0 0 32 32" fill="none" style="display:block;transform-origin:center;animation:bfFlap 0.55s ease-in-out infinite 0.4s;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#9c3a86"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/><rect x="15.4" y="8" width="1.2" height="16" rx="0.6" fill="#1a1440"/></svg></span>
+        <span style="position:absolute;left:59.83%;top:50.8%;margin:-10px;animation:bfDrift 8s ease-in-out infinite 1.2s;"><svg width="20" height="20" viewBox="0 0 32 32" fill="none" style="display:block;transform-origin:center;animation:bfFlap 0.55s ease-in-out infinite 0.15s;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#9c3a86"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/><rect x="15.4" y="8" width="1.2" height="16" rx="0.6" fill="#1a1440"/></svg></span>
+        <span style="position:absolute;left:88.17%;top:71.01%;margin:-9.5px;animation:bfDrift 9.5s ease-in-out infinite 0.6s;"><svg width="19" height="19" viewBox="0 0 32 32" fill="none" style="display:block;transform-origin:center;animation:bfFlap 0.6s ease-in-out infinite 0.35s;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#9c3a86"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/><rect x="15.4" y="8" width="1.2" height="16" rx="0.6" fill="#1a1440"/></svg></span>
+        <!-- live counter chip -->
+        <div style="position:absolute;left:20px;bottom:16px;background:rgba(247,240,228,0.92);backdrop-filter:blur(6px);border:1px solid #efe6d4;border-radius:14px;padding:10px 16px;display:flex;align-items:center;gap:12px;animation:bfFadeIn 1s ease both;">
+          <span style="position:relative;width:9px;height:9px;flex:0 0 auto;"><span style="position:absolute;inset:0;border-radius:50%;background:#e0715c;"></span><span style="position:absolute;inset:-4px;border-radius:50%;background:rgba(224,113,92,0.4);animation:bfPing 2s ease-out infinite;"></span></span>
+          <div style="line-height:1.15;"><div style="font-family:'DM Serif Display',serif;font-size:20px;color:#1a1440;">5,386 drops</div><div style="font-size:11px;color:#8a8069;font-weight:600;letter-spacing:0.02em;">and counting · 28 cities worldwide</div></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:26px;">
+      <a href="/butterfly-drops" style="font-weight:700;font-size:15px;color:#e0715c;text-decoration:none;">See where drops have landed →</a>
+    </div>
+  </div>
+
+  <!-- IMPACT + CTA (dusk) -->
+  <div style="margin-top:76px;padding:clamp(56px,8vw,88px) clamp(20px,5vw,40px);background:linear-gradient(135deg,#4a1f63 0%,#9c3a86 46%,#e0715c 100%);text-align:center;color:#f7f0e4;position:relative;overflow:hidden;">
+    <span style="position:absolute;width:360px;height:360px;border-radius:50%;border:1px solid rgba(255,255,255,0.28);top:40px;left:50%;margin-left:-180px;animation:bfRipple 3.6s ease-out infinite;"></span>
+    <div style="position:relative;max-width:720px;margin:0 auto;">
+      <svg width="40" height="40" viewBox="0 0 32 32" fill="none" style="margin-bottom:20px;animation:bfFloat 6s ease-in-out infinite;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#9c3a86"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/><rect x="15.2" y="7" width="1.6" height="18" rx="0.8" fill="#1a1440"/></svg>
+      <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(32px,6vw,50px);line-height:1.05;margin:0 0 16px;">Nearly $320,000 raised for over 500 causes.</h2>
+      <p style="font-size:17px;color:rgba(247,240,228,0.8);margin:0 auto 32px;max-width:520px;">Every drop is a molecule of love set loose in the world. Add yours — and watch the ripple grow.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="/partner" style="background:#2fd0c6;color:#0f3b3a;font-weight:800;font-size:16px;padding:17px 38px;border-radius:100px;text-decoration:none;">Donate now</a>
+        <a href="/impact" style="background:transparent;border:1.5px solid rgba(247,240,228,0.4);color:#f7f0e4;font-weight:700;font-size:16px;padding:17px 32px;border-radius:100px;text-decoration:none;">Explore our impact</a>
+      </div>
+    </div>
+  </div>
+
+  <dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

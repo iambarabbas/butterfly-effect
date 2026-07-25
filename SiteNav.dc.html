@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  @keyframes bfFloat { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-6px) rotate(2deg); } }
+  .bf-burger { display: none; }
+  .bf-mobile-menu { display: none; }
+  .bf-drop-panel { display: none; }
+  .bf-drop-wrap:hover .bf-drop-panel, .bf-drop-wrap:focus-within .bf-drop-panel { display: flex; }
+  @media (max-width: 880px) {
+    .bf-nav { padding: 14px 20px !important; }
+    .bf-nav-links { display: none !important; }
+    .bf-burger { display: flex; }
+    .bf-mobile-menu.bf-open { display: flex; }
+  }
+  @media (max-width: 400px) {
+    .bf-logo-text { display: none; }
+  }
+</style>
+</helmet>
+<nav class="bf-nav" style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 40px;background:rgba(247,240,228,0.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(26,20,64,0.07);font-family:'Manrope',sans-serif;">
+  <a href="/" class="bf-logo-link" style="display:flex;align-items:center;gap:11px;text-decoration:none;color:#1a1440;flex:0 0 auto;">
+    <svg width="30" height="30" viewBox="0 0 32 32" fill="none" style="animation:bfFloat 5s ease-in-out infinite;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#9c3a86"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/><rect x="15.2" y="7" width="1.6" height="18" rx="0.8" fill="#1a1440"/></svg>
+    <span class="bf-logo-text" style="font-family:'DM Serif Display',serif;font-size:22px;white-space:nowrap;">Butterfly Effect</span>
+  </a>
+  <div class="bf-nav-links" style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;justify-content:center;">
+    <sc-for list="{{ links }}" as="l" hint-placeholder-count="8">
+      <sc-if value="{{ l.hasDropdown }}">
+        <div class="bf-drop-wrap" tabindex="0" style="position:relative;display:inline-flex;align-items:center;">
+          <a href="{{ l.href }}" class="bf-nav-link" style="{{ l.style }}">{{ l.label }} <span style="font-size:10px;">&#9662;</span></a>
+          <div class="bf-drop-panel" style="position:absolute;top:100%;left:0;flex-direction:column;background:#fff;border:1px solid rgba(26,20,64,0.08);border-radius:12px;box-shadow:0 16px 28px rgba(26,20,64,0.14);padding:8px;min-width:180px;gap:2px;z-index:60;">
+            <sc-for list="{{ l.dropdown }}" as="d" hint-placeholder-count="2">
+              <a href="{{ d.href }}" class="bf-nav-link" style="{{ d.style }}">{{ d.label }}</a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ l.noDropdown }}">
+        <a href="{{ l.href }}" class="bf-nav-link" style="{{ l.style }}">{{ l.label }}</a>
+      </sc-if>
+    </sc-for>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto;">
+    <a href="/partner" style="font-family:'Manrope',sans-serif;font-weight:800;font-size:14px;background:#2fd0c6;color:#0f3b3a;padding:11px 22px;border-radius:100px;text-decoration:none;white-space:nowrap;">Donate</a>
+    <button class="bf-burger" onclick="{{ toggleMenu }}" aria-label="{{ menuAriaLabel }}" aria-expanded="{{ menuExpanded }}" style="flex-direction:column;justify-content:center;align-items:center;gap:5px;width:38px;height:38px;border:none;background:transparent;border-radius:10px;cursor:pointer;padding:0;">
+      <span style="{{ barTopStyle }}"></span>
+      <span style="{{ barMidStyle }}"></span>
+      <span style="{{ barBottomStyle }}"></span>
+    </button>
+  </div>
+  <div class="{{ menuClass }}" style="position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#f7f0e4;border-bottom:1px solid rgba(26,20,64,0.07);box-shadow:0 16px 28px rgba(26,20,64,0.1);padding:8px 24px 20px;gap:2px;">
+    <sc-for list="{{ links }}" as="l" hint-placeholder-count="8">
+      <a href="{{ l.href }}" onclick="{{ closeMenu }}" class="bf-nav-link" style="{{ l.mobileStyle }}">{{ l.label }}</a>
+      <sc-if value="{{ l.hasDropdown }}">
+        <sc-for list="{{ l.dropdown }}" as="d" hint-placeholder-count="2">
+          <a href="{{ d.href }}" onclick="{{ closeMenu }}" class="bf-nav-link" style="{{ d.mobileStyle }}">{{ d.label }}</a>
+        </sc-for>
+      </sc-if>
+    </sc-for>
+  </div>
+</nav>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:72},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;&quot;,&quot;social&quot;,&quot;drops&quot;,&quot;blog&quot;,&quot;impact&quot;,&quot;about&quot;,&quot;media&quot;,&quot;partner&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { open: false };
+  }
+  renderVals() {
+    const active = this.props.active || '';
+    const open = this.state.open;
+    const base = [
+      ['Social Butterflies','/social-butterflies','social',[
+        ['Mall of America','/social-butterflies/mall-of-america','moa'],
+      ]],
+      ['Butterfly Drops','/butterfly-drops','drops'],
+      ['Blog','/blog','blog'],
+      ['Impact','/impact','impact'],
+      ['About','/about','about'],
+      ['Media','/media','media'],
+      ['Partner','/partner','partner'],
+      ['Contact','/contact','contact'],
+    ];
+    const links = base.map(([label, href, key, children]) => {
+      const style = {
+        textDecoration: 'none',
+        fontFamily: "'Manrope',sans-serif",
+        fontSize: '14.5px',
+        fontWeight: key === active ? 800 : 600,
+        color: key === active ? '#e0715c' : '#3a3358',
+        paddingBottom: '2px',
+        borderBottom: key === active ? '2px solid #e0715c' : '2px solid transparent',
+        whiteSpace: 'nowrap',
+      };
+      const mobileStyle = {
+        textDecoration: 'none',
+        fontFamily: "'Manrope',sans-serif",
+        fontSize: '17px',
+        fontWeight: key === active ? 800 : 600,
+        color: key === active ? '#e0715c' : '#1a1440',
+        padding: '12px 0',
+        borderBottom: '1px solid rgba(26,20,64,0.08)',
+      };
+      const dropdown = (children || []).map(([dLabel, dHref, dKey]) => ({
+        label: dLabel,
+        href: dHref,
+        style: {
+          textDecoration: 'none',
+          fontFamily: "'Manrope',sans-serif",
+          fontSize: '14px',
+          fontWeight: dKey === active ? 800 : 600,
+          color: dKey === active ? '#e0715c' : '#3a3358',
+          padding: '9px 12px',
+          borderRadius: '8px',
+          whiteSpace: 'nowrap',
+        },
+        mobileStyle: {
+          textDecoration: 'none',
+          fontFamily: "'Manrope',sans-serif",
+          fontSize: '15.5px',
+          fontWeight: dKey === active ? 800 : 600,
+          color: dKey === active ? '#e0715c' : '#5c5470',
+          padding: '10px 0 10px 18px',
+          borderBottom: '1px solid rgba(26,20,64,0.08)',
+        },
+      }));
+      return {
+        label, href, style, mobileStyle,
+        hasDropdown: dropdown.length > 0,
+        noDropdown: dropdown.length === 0,
+        dropdown,
+      };
+    });
+    const barStyle = {
+      display: 'block',
+      width: '22px',
+      height: '2px',
+      background: '#1a1440',
+      borderRadius: '2px',
+      transition: 'transform .2s ease, opacity .2s ease',
+    };
+    return {
+      links,
+      toggleMenu: () => this.setState({ open: !this.state.open }),
+      closeMenu: () => this.setState({ open: false }),
+      menuClass: open ? 'bf-mobile-menu bf-open' : 'bf-mobile-menu',
+      menuAriaLabel: open ? 'Close menu' : 'Open menu',
+      menuExpanded: open ? 'true' : 'false',
+      barTopStyle: { ...barStyle, transform: open ? 'translateY(7px) rotate(45deg)' : 'none' },
+      barMidStyle: { ...barStyle, opacity: open ? 0 : 1 },
+      barBottomStyle: { ...barStyle, transform: open ? 'translateY(-7px) rotate(-45deg)' : 'none' },
+    };
+  }
+}
+</script>
+</body>
+</html>

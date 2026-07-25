@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @keyframes bfFloat { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-10px) rotate(2deg); } }
+  @keyframes bfFadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes bfWingA { 0%,100% { transform: scaleX(1); } 50% { transform: scaleX(0.72); } }
+  @keyframes bfRipple { 0% { transform: scale(0.6); opacity: 0.55; } 100% { transform: scale(2.4); opacity: 0; } }
+  .phone { animation: bfFadeUp 0.6s ease both; }
+  .phone::-webkit-scrollbar { width: 0; }
+  a { color: inherit; }
+</style>
+<script src="/image-slot.js"></script>
+</helmet>
+
+<section style="min-height:100vh;background:#eceae4;padding:64px 48px 120px;font-family:'Manrope',sans-serif;">
+  <div style="max-width:1360px;margin:0 auto 40px;">
+    <div style="font-family:'Space Grotesk',monospace;font-size:13px;letter-spacing:0.22em;text-transform:uppercase;color:#8a8578;">Turn 3 · Desktop view</div>
+    <h1 style="font-family:'DM Serif Display',serif;font-size:40px;line-height:1.05;margin:14px 0 10px;color:#1a1440;font-weight:400;">2a on desktop <span style="color:#e0715c;">— with the blue-winged mark</span></h1>
+    <p style="max-width:640px;margin:0;font-size:16px;line-height:1.6;color:#5c584f;">Same direction as <a href="#2a" style="color:#e0715c;font-weight:700;">2a</a>, composed for a wide screen. The butterfly's left wing now carries the original-site blue. Reference as <a href="#3a" style="color:#e0715c;font-weight:700;">3a</a>.</p>
+  </div>
+  <div id="3a" style="max-width:1320px;margin:0 auto;">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+      <span style="font-family:'Space Grotesk',monospace;font-weight:700;font-size:14px;background:#1a1440;color:#f5c451;padding:5px 12px;border-radius:100px;">3a</span>
+      <div style="font-weight:800;font-size:15px;color:#1a1440;">Desktop homepage · Luminous &amp; Airy</div>
+    </div>
+    <div style="border-radius:16px;overflow:hidden;box-shadow:0 40px 90px -40px rgba(26,20,64,0.5);background:#f7f0e4;">
+      <!-- browser chrome -->
+      <div style="height:44px;background:#e6ddcc;display:flex;align-items:center;padding:0 16px;gap:8px;border-bottom:1px solid #dccfb8;">
+        <span style="width:12px;height:12px;border-radius:50%;background:#e0715c;"></span>
+        <span style="width:12px;height:12px;border-radius:50%;background:#f5c451;"></span>
+        <span style="width:12px;height:12px;border-radius:50%;background:#5b8fd6;"></span>
+        <div style="margin-left:16px;background:#f7f0e4;border-radius:8px;font-size:12px;color:#8a8069;padding:6px 16px;font-family:'Space Grotesk',monospace;">butterflyeffectbethechange.com</div>
+      </div>
+      <div style="height:760px;overflow-y:auto;font-family:'Manrope',sans-serif;color:#1a1440;">
+        <!-- NAV -->
+        <div style="position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:20px 48px;background:rgba(247,240,228,0.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(26,20,64,0.06);">
+          <div style="display:flex;align-items:center;gap:11px;">
+            <svg width="30" height="30" viewBox="0 0 32 32" fill="none" style="animation:bfFloat 5s ease-in-out infinite;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#5b8fd6"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/><rect x="15.2" y="7" width="1.6" height="18" rx="0.8" fill="#f7f0e4"/></svg>
+            <span style="font-family:'DM Serif Display',serif;font-size:22px;">Butterfly Effect</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:30px;font-size:14.5px;font-weight:600;color:#3a3358;">
+            <a href="#3a" style="text-decoration:none;color:inherit;">Social Butterflies</a>
+            <a href="#3a" style="text-decoration:none;color:inherit;">Butterfly Drops</a>
+            <a href="#3a" style="text-decoration:none;color:inherit;">About</a>
+            <a href="#3a" style="text-decoration:none;color:inherit;">Media</a>
+            <a href="#3a" style="text-decoration:none;color:inherit;">Contact</a>
+          </div>
+          <a href="#3a" style="font-weight:800;font-size:14px;background:#e0715c;color:#fff;padding:11px 22px;border-radius:100px;text-decoration:none;">Donate</a>
+        </div>
+        <!-- HERO -->
+        <div style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:52px;align-items:center;padding:60px 48px 56px;">
+          <div>
+            <div style="display:inline-block;font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#e0715c;font-weight:700;background:#fbe4dd;padding:8px 16px;border-radius:100px;margin-bottom:26px;">Grassroots philanthropy · since 2013</div>
+            <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:74px;line-height:0.98;margin:0 0 22px;">Be the <span style="font-style:italic;color:#e0715c;">change</span> you want to see.</h2>
+            <p style="font-size:18px;line-height:1.6;color:#5c5470;margin:0 0 30px;max-width:460px;">A movement redefining generosity one flutter at a time — small acts that ripple into real, lasting change.</p>
+            <div style="display:flex;gap:14px;margin-bottom:40px;">
+              <a href="#3a" style="background:#1a1440;color:#fff;font-weight:800;font-size:16px;padding:17px 30px;border-radius:100px;text-decoration:none;">Learn the story</a>
+              <a href="#3a" style="display:flex;align-items:center;gap:9px;background:#fff;border:1.5px solid #e6dcc9;color:#1a1440;font-weight:700;font-size:16px;padding:17px 26px;border-radius:100px;text-decoration:none;"><svg width="14" height="14" viewBox="0 0 16 16" fill="#1a1440"><path d="M4 2.5v11l9-5.5z"/></svg> Watch the film</a>
+            </div>
+            <div style="display:flex;gap:36px;border-top:1px solid #e6dcc9;padding-top:26px;">
+              <div><div style="font-family:'DM Serif Display',serif;font-size:34px;color:#1a1440;">5,386</div><div style="font-size:12px;color:#7a7490;font-weight:700;letter-spacing:0.04em;margin-top:2px;">DROPS GLOBALLY</div></div>
+              <div><div style="font-family:'DM Serif Display',serif;font-size:34px;color:#e0715c;">$320k</div><div style="font-size:12px;color:#a5756a;font-weight:700;letter-spacing:0.04em;margin-top:2px;">RAISED</div></div>
+              <div><div style="font-family:'DM Serif Display',serif;font-size:34px;color:#b98511;">500+</div><div style="font-size:12px;color:#9a8341;font-weight:700;letter-spacing:0.04em;margin-top:2px;">CAUSES</div></div>
+            </div>
+          </div>
+          <div style="position:relative;height:480px;border-radius:30px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(26,20,64,0.55);">
+            <image-slot id="e-hero" shape="rect" placeholder="Social Butterfly installation" style="position:absolute;inset:0;"></image-slot>
+            <div style="position:absolute;left:20px;bottom:20px;background:rgba(247,240,228,0.94);backdrop-filter:blur(6px);border-radius:16px;padding:14px 18px;display:flex;align-items:center;gap:13px;">
+              <div style="font-family:'DM Serif Display',serif;font-size:30px;color:#e0715c;line-height:1;">100+</div>
+              <div style="font-size:12.5px;line-height:1.3;color:#5c5470;font-weight:600;">Social Butterflies in<br>28 cities worldwide</div>
+            </div>
+          </div>
+        </div>
+        <!-- STORY -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;padding:56px 48px;background:#fff;">
+          <div>
+            <div style="font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#e0715c;font-weight:700;margin-bottom:18px;">The idea</div>
+            <p style="font-family:'DM Serif Display',serif;font-weight:400;font-style:italic;font-size:36px;line-height:1.28;margin:0;color:#1a1440;">The softest flutter of a wing can set off a chain reaction that produces major change.</p>
+          </div>
+          <div>
+            <p style="font-size:16px;line-height:1.7;color:#5c5470;margin:0 0 18px;">Artist and entrepreneur Tasha Wahl fused Gandhi's timeless call to “be the change” with Edward Lorenz's Butterfly Effect theory — and built a worldwide movement of contagious generosity through interactive art.</p>
+            <p style="font-size:16px;line-height:1.7;color:#5c5470;margin:0;">Since 2013, thousands of Butterfly Drops and hundreds of Social Butterflies have raised nearly $320,000 for more than 500 charitable organizations.</p>
+          </div>
+        </div>
+        <!-- PROGRAMS -->
+        <div style="padding:60px 48px 20px;">
+          <h3 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:40px;text-align:center;margin:0 0 34px;">Two ways to flutter</h3>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+            <div style="background:#fff;border:1px solid #efe6d4;border-radius:26px;overflow:hidden;box-shadow:0 16px 34px -26px rgba(26,20,64,0.5);">
+              <div style="position:relative;height:230px;"><image-slot id="e-drops" shape="rect" placeholder="Butterfly Drop" style="position:absolute;inset:0;"></image-slot></div>
+              <div style="padding:24px 26px 26px;">
+                <div style="font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:#e0715c;font-weight:700;">Give unexpectedly</div>
+                <div style="font-family:'DM Serif Display',serif;font-size:28px;margin:4px 0 8px;">Butterfly Drops</div>
+                <p style="font-size:15px;color:#5c5470;margin:0;line-height:1.6;">Random acts of kindness, left in the world for strangers to find — the movement's original spark.</p>
+              </div>
+            </div>
+            <div style="background:#fff;border:1px solid #efe6d4;border-radius:26px;overflow:hidden;box-shadow:0 16px 34px -26px rgba(26,20,64,0.5);">
+              <div style="position:relative;height:230px;"><image-slot id="e-social" shape="rect" placeholder="Social Butterfly installation" style="position:absolute;inset:0;"></image-slot></div>
+              <div style="padding:24px 26px 26px;">
+                <div style="font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:#b98511;font-weight:700;">Give together</div>
+                <div style="font-family:'DM Serif Display',serif;font-size:28px;margin:4px 0 8px;">Social Butterflies</div>
+                <p style="font-size:15px;color:#5c5470;margin:0;line-height:1.6;">Interactive public art installations that fan waves of social-media giving for causes worldwide.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CTA -->
+        <div style="margin-top:44px;padding:70px 48px 76px;background:linear-gradient(150deg,#1a1440,#3a2a5c);text-align:center;color:#f7f0e4;position:relative;overflow:hidden;">
+          <span style="position:absolute;width:320px;height:320px;border-radius:50%;border:1px solid rgba(245,196,81,0.3);top:40px;left:50%;margin-left:-160px;animation:bfRipple 3.4s ease-out infinite;"></span>
+          <div style="position:relative;">
+            <svg width="38" height="38" viewBox="0 0 32 32" fill="none" style="margin-bottom:18px;animation:bfFloat 6s ease-in-out infinite;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#5b8fd6"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/><rect x="15.2" y="7" width="1.6" height="18" rx="0.8" fill="#1a1440"/></svg>
+            <h3 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:46px;margin:0 0 14px;">Start a ripple today</h3>
+            <p style="font-size:16px;color:rgba(247,240,228,0.78);margin:0 auto 28px;max-width:440px;">Join thousands turning small, joyful acts into lasting change all over the world.</p>
+            <a href="#3a" style="display:inline-block;background:#f5c451;color:#1a1440;font-weight:800;font-size:16px;padding:17px 40px;border-radius:100px;text-decoration:none;">Donate now</a>
+          </div>
+        </div>
+        <!-- FOOTER -->
+        <div style="background:#12102e;color:rgba(247,240,228,0.6);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;font-size:13px;">
+          <div style="display:flex;align-items:center;gap:10px;color:#f7f0e4;font-family:'DM Serif Display',serif;font-size:18px;"><svg width="22" height="22" viewBox="0 0 32 32" fill="none"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#5b8fd6"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/></svg> Butterfly Effect</div>
+          <div>© 2026 Butterfly Effect · Be the Change</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="min-height:100vh;background:#eceae4;padding:64px 48px 120px;font-family:'Manrope',sans-serif;">
+  <div style="max-width:1360px;margin:0 auto 40px;">
+    <div style="font-family:'Space Grotesk',monospace;font-size:13px;letter-spacing:0.22em;text-transform:uppercase;color:#8a8578;">Turn 2 · Refined direction</div>
+    <h1 style="font-family:'DM Serif Display',serif;font-size:40px;line-height:1.05;margin:14px 0 10px;color:#1a1440;font-weight:400;">Light &amp; luminous <span style="color:#e0715c;">(1a colors, 1b lightness)</span></h1>
+    <p style="max-width:640px;margin:0;font-size:16px;line-height:1.6;color:#5c584f;">1a's indigo / coral / gold palette and DM Serif + Manrope type, set on a warm cream base. The dusk tones return as accents and the closing moment. Reference as <a href="#2a" style="color:#e0715c;font-weight:700;">2a</a>.</p>
+  </div>
+  <div style="display:flex;justify-content:center;">
+  <div id="2a" style="flex:0 0 auto;">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+      <span style="font-family:'Space Grotesk',monospace;font-weight:700;font-size:14px;background:#1a1440;color:#f5c451;padding:5px 12px;border-radius:100px;">2a</span>
+      <div>
+        <div style="font-weight:800;font-size:15px;color:#1a1440;">Luminous &amp; Airy</div>
+        <div style="font-size:13px;color:#8a8578;">Cream base · indigo ink · coral &amp; gold glow</div>
+      </div>
+    </div>
+    <div class="phone" style="width:392px;height:840px;overflow-y:auto;border-radius:44px;background:#f7f0e4;box-shadow:0 40px 80px -30px rgba(26,20,64,0.4),0 0 0 11px #1a1440,0 0 0 12px #342c5e;font-family:'Manrope',sans-serif;color:#1a1440;">
+      <div style="position:sticky;top:0;z-index:5;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;background:rgba(247,240,228,0.82);backdrop-filter:blur(10px);">
+        <div style="display:flex;align-items:center;gap:9px;">
+          <svg width="27" height="27" viewBox="0 0 32 32" fill="none" style="animation:bfFloat 5s ease-in-out infinite;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#5b8fd6"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/><rect x="15.2" y="7" width="1.6" height="18" rx="0.8" fill="#f7f0e4"/></svg>
+          <span style="font-family:'DM Serif Display',serif;font-size:19px;color:#1a1440;">Butterfly Effect</span>
+        </div>
+        <a href="#2a" style="font-weight:800;font-size:13px;background:#e0715c;color:#fff;padding:9px 15px;border-radius:100px;text-decoration:none;">Donate</a>
+      </div>
+      <div style="padding:26px 22px 6px;text-align:center;">
+        <div style="display:inline-block;font-family:'Space Grotesk',monospace;font-size:11.5px;letter-spacing:0.16em;text-transform:uppercase;color:#e0715c;font-weight:700;background:#fbe4dd;padding:7px 14px;border-radius:100px;margin-bottom:22px;">Grassroots philanthropy · since 2013</div>
+        <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:50px;line-height:1.0;margin:0 0 16px;">Be the <span style="font-style:italic;color:#e0715c;">change</span> you want to see.</h2>
+        <p style="font-size:16px;line-height:1.6;color:#5c5470;margin:0 auto 24px;max-width:320px;">A movement redefining generosity one flutter at a time — small acts that ripple into real change.</p>
+        <div style="display:flex;gap:10px;margin-bottom:6px;">
+          <a href="#2a" style="flex:1;text-align:center;background:#1a1440;color:#fff;font-weight:800;font-size:15px;padding:16px;border-radius:100px;text-decoration:none;">Learn the story</a>
+          <a href="#2a" style="width:54px;display:flex;align-items:center;justify-content:center;background:#fff;border:1.5px solid #e6dcc9;border-radius:100px;text-decoration:none;"><svg width="15" height="15" viewBox="0 0 16 16" fill="#1a1440"><path d="M4 2.5v11l9-5.5z"/></svg></a>
+        </div>
+      </div>
+      <div style="position:relative;height:280px;margin:20px 22px 0;border-radius:26px;overflow:hidden;box-shadow:0 24px 40px -20px rgba(26,20,64,0.5);">
+        <image-slot id="d-hero" shape="rect" placeholder="Social Butterfly installation" style="position:absolute;inset:0;"></image-slot>
+        <div style="position:absolute;left:14px;bottom:14px;background:rgba(247,240,228,0.92);backdrop-filter:blur(6px);border-radius:14px;padding:10px 14px;display:flex;align-items:center;gap:10px;">
+          <div style="font-family:'DM Serif Display',serif;font-size:24px;color:#e0715c;line-height:1;">$320k</div>
+          <div style="font-size:11px;line-height:1.25;color:#5c5470;font-weight:600;">raised for<br>500+ causes</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:24px 22px 6px;">
+        <div style="background:#eae6f5;border-radius:18px;padding:18px 6px;text-align:center;"><div style="font-family:'DM Serif Display',serif;font-size:27px;color:#1a1440;">5,386</div><div style="font-size:10px;color:#7a7490;margin-top:3px;font-weight:700;letter-spacing:0.04em;">DROPS</div></div>
+        <div style="background:#fbe4dd;border-radius:18px;padding:18px 6px;text-align:center;"><div style="font-family:'DM Serif Display',serif;font-size:27px;color:#e0715c;">100+</div><div style="font-size:10px;color:#a5756a;margin-top:3px;font-weight:700;letter-spacing:0.04em;">BUTTERFLIES</div></div>
+        <div style="background:#faedcf;border-radius:18px;padding:18px 6px;text-align:center;"><div style="font-family:'DM Serif Display',serif;font-size:27px;color:#b98511;">28</div><div style="font-size:10px;color:#9a8341;margin-top:3px;font-weight:700;letter-spacing:0.04em;">CITIES</div></div>
+      </div>
+      <div style="padding:34px 22px 8px;">
+        <div style="font-family:'Space Grotesk',monospace;font-size:11.5px;letter-spacing:0.2em;text-transform:uppercase;color:#e0715c;font-weight:700;margin-bottom:14px;">The idea</div>
+        <p style="font-family:'DM Serif Display',serif;font-weight:400;font-style:italic;font-size:26px;line-height:1.3;margin:0 0 16px;color:#1a1440;">The softest flutter of a wing can set off a chain reaction that produces major change.</p>
+        <p style="font-size:14.5px;line-height:1.65;color:#5c5470;margin:0;">Artist Tasha Wahl fused Gandhi's call to “be the change” with Edward Lorenz's Butterfly Effect — building a worldwide movement of contagious generosity through interactive art.</p>
+      </div>
+      <div style="padding:32px 22px 8px;display:flex;flex-direction:column;gap:14px;">
+        <div style="background:#fff;border:1px solid #efe6d4;border-radius:22px;overflow:hidden;box-shadow:0 12px 28px -22px rgba(26,20,64,0.5);">
+          <div style="position:relative;height:158px;"><image-slot id="d-drops" shape="rect" placeholder="Butterfly Drop" style="position:absolute;inset:0;"></image-slot></div>
+          <div style="padding:16px 18px;">
+            <div style="font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:#e0715c;font-weight:700;">Give unexpectedly</div>
+            <div style="font-family:'DM Serif Display',serif;font-size:24px;margin:2px 0 4px;color:#1a1440;">Butterfly Drops</div>
+            <p style="font-size:13.5px;color:#5c5470;margin:0;line-height:1.55;">Random acts of kindness, left for strangers to find.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid #efe6d4;border-radius:22px;overflow:hidden;box-shadow:0 12px 28px -22px rgba(26,20,64,0.5);">
+          <div style="position:relative;height:158px;"><image-slot id="d-social" shape="rect" placeholder="Social Butterfly installation" style="position:absolute;inset:0;"></image-slot></div>
+          <div style="padding:16px 18px;">
+            <div style="font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:#b98511;font-weight:700;">Give together</div>
+            <div style="font-family:'DM Serif Display',serif;font-size:24px;margin:2px 0 4px;color:#1a1440;">Social Butterflies</div>
+            <p style="font-size:13.5px;color:#5c5470;margin:0;line-height:1.55;">Public art installations that fuel social-media giving.</p>
+          </div>
+        </div>
+      </div>
+      <div style="margin:36px 0 0;padding:40px 26px 44px;background:linear-gradient(150deg,#1a1440,#3a2a5c);text-align:center;color:#f7f0e4;position:relative;overflow:hidden;">
+        <span style="position:absolute;width:160px;height:160px;border-radius:50%;border:1px solid rgba(245,196,81,0.35);top:24px;left:50%;margin-left:-80px;animation:bfRipple 3.4s ease-out infinite;"></span>
+        <div style="position:relative;">
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none" style="margin-bottom:14px;animation:bfFloat 6s ease-in-out infinite;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#5b8fd6"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/><rect x="15.2" y="7" width="1.6" height="18" rx="0.8" fill="#1a1440"/></svg>
+          <h3 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:30px;margin:0 0 10px;">Start a ripple today</h3>
+          <p style="font-size:14px;color:rgba(247,240,228,0.78);margin:0 0 22px;">Join thousands turning small acts into lasting change.</p>
+          <a href="#2a" style="display:block;background:#f5c451;color:#1a1440;font-weight:800;padding:16px;border-radius:100px;text-decoration:none;">Donate now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section style="min-height:100vh;background:#eceae4;padding:64px 48px 120px;font-family:'Manrope',sans-serif;">
+  <div style="max-width:1360px;margin:0 auto 56px;">
+    <div style="font-family:'Space Grotesk',monospace;font-size:13px;letter-spacing:0.22em;text-transform:uppercase;color:#8a8578;">Turn 1 · Mobile homepage directions</div>
+    <h1 style="font-family:'DM Serif Display',serif;font-size:44px;line-height:1.05;margin:14px 0 10px;color:#26241f;font-weight:400;">Three directions for the 2026 refresh</h1>
+    <p style="max-width:640px;margin:0;font-size:16px;line-height:1.6;color:#5c584f;">Each is a full mobile homepage built on the real brand story — same messaging, three distinct aesthetics. Reference them by id in chat (<a href="#1a" style="color:#a8452f;font-weight:700;">1a</a>, <a href="#1b" style="color:#a8452f;font-weight:700;">1b</a>, <a href="#1c" style="color:#a8452f;font-weight:700;">1c</a>) and I'll expand your pick into the complete site.</p>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start;justify-content:center;">
+
+    <!-- ============ OPTION 1A · DUSK / LUMINOUS ============ -->
+    <div id="1a" style="flex:0 0 auto;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <span style="font-family:'Space Grotesk',monospace;font-weight:700;font-size:14px;background:#1a1440;color:#f5c451;padding:5px 12px;border-radius:100px;">1a</span>
+        <div>
+          <div style="font-weight:800;font-size:15px;color:#26241f;">Dusk &amp; Luminescence</div>
+          <div style="font-size:13px;color:#8a8578;">Emotional, editorial, glowing — for donors &amp; press</div>
+        </div>
+      </div>
+      <div class="phone" style="width:392px;height:840px;overflow-y:auto;border-radius:44px;background:#171233;box-shadow:0 40px 80px -30px rgba(23,18,51,0.6),0 0 0 11px #0e0b22,0 0 0 12px #2a2350;font-family:'Manrope',sans-serif;color:#f4f1ff;">
+        <div style="position:relative;">
+          <!-- HERO -->
+          <div style="position:relative;height:600px;overflow:hidden;">
+            <image-slot id="a-hero" shape="rect" fit="cover" placeholder="Social Butterfly installation" style="position:absolute;inset:0;"></image-slot>
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,18,51,0.55) 0%,rgba(23,18,51,0.2) 32%,rgba(23,18,51,0.82) 74%,#171233 100%);pointer-events:none;"></div>
+            <div style="position:relative;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;pointer-events:none;">
+              <div style="display:flex;align-items:center;gap:9px;">
+                <svg width="26" height="26" viewBox="0 0 32 32" fill="none" style="animation:bfFloat 5s ease-in-out infinite;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#f5c451"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#ff8f7a"/><path d="M16 16c-2.5 5-6 7-8.5 6.5C5.5 22 5 18 8 16c2-1.3 5-.5 8 0z" fill="#f5c451" opacity="0.8"/><path d="M16 16c2.5 5 6 7 8.5 6.5 2-.5 2.5-4.5-.5-6.5-2-1.3-5-.5-8 0z" fill="#ff8f7a" opacity="0.8"/><rect x="15.2" y="7" width="1.6" height="18" rx="0.8" fill="#171233"/></svg>
+                <span style="font-family:'DM Serif Display',serif;font-size:18px;letter-spacing:0.01em;">Butterfly Effect</span>
+              </div>
+              <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.14);backdrop-filter:blur(6px);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;">
+                <span style="width:15px;height:1.6px;background:#fff;border-radius:2px;"></span>
+                <span style="width:15px;height:1.6px;background:#fff;border-radius:2px;"></span>
+              </div>
+            </div>
+            <div style="position:absolute;left:22px;right:22px;bottom:34px;pointer-events:none;">
+              <div style="font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.24em;text-transform:uppercase;color:#f5c451;margin-bottom:16px;">Grassroots philanthropy · est. 2013</div>
+              <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:46px;line-height:1.02;margin:0 0 16px;">Be the change you want to see.</h2>
+              <p style="font-size:15.5px;line-height:1.55;color:rgba(244,241,255,0.82);margin:0 0 22px;max-width:300px;">A movement redefining generosity one flutter at a time — small acts that ripple into real change.</p>
+              <div style="display:flex;gap:10px;pointer-events:auto;">
+                <a href="#1a" style="flex:1;text-align:center;background:#ff8f7a;color:#171233;font-weight:800;font-size:15px;padding:15px;border-radius:100px;text-decoration:none;">Learn the story</a>
+                <a href="#1a" style="width:52px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:100px;text-decoration:none;"><svg width="16" height="16" viewBox="0 0 16 16" fill="#fff"><path d="M4 2.5v11l9-5.5z"/></svg></a>
+              </div>
+            </div>
+          </div>
+          <!-- STATS -->
+          <div style="padding:34px 22px 6px;">
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;text-align:center;border-top:1px solid rgba(255,255,255,0.12);border-bottom:1px solid rgba(255,255,255,0.12);padding:22px 0;">
+              <div><div style="font-family:'DM Serif Display',serif;font-size:28px;color:#f5c451;">5,386</div><div style="font-size:10.5px;letter-spacing:0.05em;color:rgba(244,241,255,0.6);margin-top:4px;">Butterfly Drops</div></div>
+              <div style="border-left:1px solid rgba(255,255,255,0.12);border-right:1px solid rgba(255,255,255,0.12);"><div style="font-family:'DM Serif Display',serif;font-size:28px;color:#f5c451;">$320k</div><div style="font-size:10.5px;letter-spacing:0.05em;color:rgba(244,241,255,0.6);margin-top:4px;">Raised</div></div>
+              <div><div style="font-family:'DM Serif Display',serif;font-size:28px;color:#f5c451;">500+</div><div style="font-size:10.5px;letter-spacing:0.05em;color:rgba(244,241,255,0.6);margin-top:4px;">Causes</div></div>
+            </div>
+          </div>
+          <!-- STORY -->
+          <div style="padding:38px 22px 8px;">
+            <div style="font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#ff8f7a;margin-bottom:14px;">The idea</div>
+            <p style="font-family:'DM Serif Display',serif;font-weight:400;font-size:25px;line-height:1.3;margin:0 0 18px;color:#f4f1ff;font-style:italic;">The softest flutter of a wing can set off a chain reaction that produces major change.</p>
+            <p style="font-size:14.5px;line-height:1.65;color:rgba(244,241,255,0.72);margin:0;">Artist Tasha Wahl fused Gandhi's call to “be the change” with Lorenz's Butterfly Effect — and built a movement around contagious generosity.</p>
+          </div>
+          <!-- PROGRAMS -->
+          <div style="padding:36px 22px 8px;display:flex;flex-direction:column;gap:16px;">
+            <div style="position:relative;border-radius:24px;overflow:hidden;height:200px;">
+              <image-slot id="a-drops" shape="rect" placeholder="Butterfly Drop" style="position:absolute;inset:0;"></image-slot>
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(23,18,51,0.9));pointer-events:none;"></div>
+              <div style="position:absolute;left:18px;right:18px;bottom:16px;pointer-events:none;">
+                <div style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#f5c451;">Give unexpectedly</div>
+                <div style="font-family:'DM Serif Display',serif;font-size:24px;">Butterfly Drops</div>
+              </div>
+            </div>
+            <div style="position:relative;border-radius:24px;overflow:hidden;height:200px;">
+              <image-slot id="a-social" shape="rect" placeholder="Social Butterfly installation" style="position:absolute;inset:0;"></image-slot>
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(23,18,51,0.9));pointer-events:none;"></div>
+              <div style="position:absolute;left:18px;right:18px;bottom:16px;pointer-events:none;">
+                <div style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#ff8f7a;">Give together</div>
+                <div style="font-family:'DM Serif Display',serif;font-size:24px;">Social Butterflies</div>
+              </div>
+            </div>
+          </div>
+          <!-- CTA -->
+          <div style="margin:40px 22px 0;padding:34px 24px 38px;background:linear-gradient(140deg,#2a2350,#3a2a5c);border-radius:28px 28px 0 0;text-align:center;">
+            <svg width="30" height="30" viewBox="0 0 32 32" fill="none" style="margin-bottom:14px;animation:bfFloat 6s ease-in-out infinite;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#f5c451"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#ff8f7a"/><rect x="15.2" y="7" width="1.6" height="18" rx="0.8" fill="#2a2350"/></svg>
+            <h3 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:28px;margin:0 0 10px;">Start a ripple today</h3>
+            <p style="font-size:14px;color:rgba(244,241,255,0.72);margin:0 0 20px;">Join thousands turning small acts into lasting change.</p>
+            <a href="#1a" style="display:block;background:#f5c451;color:#171233;font-weight:800;padding:16px;border-radius:100px;text-decoration:none;">Donate now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ OPTION 1B · WARM GRASSROOTS ============ -->
+    <div id="1b" style="flex:0 0 auto;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <span style="font-family:'Space Grotesk',monospace;font-weight:700;font-size:14px;background:#c8613b;color:#fbf6ec;padding:5px 12px;border-radius:100px;">1b</span>
+        <div>
+          <div style="font-weight:800;font-size:15px;color:#26241f;">Warm &amp; Handcrafted</div>
+          <div style="font-size:13px;color:#8a8578;">Editorial paper feel, human &amp; approachable</div>
+        </div>
+      </div>
+      <div class="phone" style="width:392px;height:840px;overflow-y:auto;border-radius:44px;background:#fbf6ec;box-shadow:0 40px 80px -30px rgba(80,52,30,0.4),0 0 0 11px #2b2a26,0 0 0 12px #4a463d;font-family:'Hanken Grotesk',sans-serif;color:#2b2a26;">
+        <!-- NAV -->
+        <div style="position:relative;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:9px;">
+            <svg width="26" height="26" viewBox="0 0 32 32" fill="none" style="animation:bfFloat 5.5s ease-in-out infinite;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#c8613b"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#6b7150"/><rect x="15.2" y="7" width="1.6" height="18" rx="0.8" fill="#fbf6ec"/></svg>
+            <span style="font-family:'Instrument Serif',serif;font-size:22px;">Butterfly Effect</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <span style="width:18px;height:2px;background:#2b2a26;border-radius:2px;"></span>
+            <span style="width:18px;height:2px;background:#2b2a26;border-radius:2px;"></span>
+            <span style="width:12px;height:2px;background:#2b2a26;border-radius:2px;"></span>
+          </div>
+        </div>
+        <!-- HERO -->
+        <div style="padding:14px 22px 8px;">
+          <div style="display:inline-block;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#c8613b;font-weight:700;background:#f2e6d3;padding:6px 12px;border-radius:100px;margin-bottom:20px;">Grassroots since 2013</div>
+          <h2 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:52px;line-height:0.98;margin:0 0 16px;letter-spacing:-0.01em;">Be the change you want to see.</h2>
+          <p style="font-size:16px;line-height:1.6;color:#5c584f;margin:0 0 22px;">Redefining philanthropy one “butterfly” at a time. Small, joyful acts of generosity that ripple outward into your community.</p>
+          <div style="display:flex;gap:10px;margin-bottom:24px;">
+            <a href="#1b" style="flex:1;text-align:center;background:#2b2a26;color:#fbf6ec;font-weight:700;font-size:15px;padding:15px;border-radius:14px;text-decoration:none;">Learn the story</a>
+            <a href="#1b" style="text-align:center;background:transparent;border:1.5px solid #d8c9b0;color:#2b2a26;font-weight:700;font-size:15px;padding:15px 18px;border-radius:14px;text-decoration:none;">Donate</a>
+          </div>
+        </div>
+        <div style="position:relative;height:250px;margin:0 22px;border-radius:22px;overflow:hidden;">
+          <image-slot id="b-hero" shape="rect" placeholder="Social Butterfly installation" style="position:absolute;inset:0;"></image-slot>
+        </div>
+        <!-- STATS -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:26px 22px 6px;">
+          <div style="background:#f2e6d3;border-radius:16px;padding:16px 8px;text-align:center;"><div style="font-family:'Instrument Serif',serif;font-size:26px;color:#c8613b;">5,386</div><div style="font-size:10px;color:#8a7e6a;margin-top:2px;font-weight:600;">DROPS</div></div>
+          <div style="background:#e7ebdd;border-radius:16px;padding:16px 8px;text-align:center;"><div style="font-family:'Instrument Serif',serif;font-size:26px;color:#6b7150;">$320k</div><div style="font-size:10px;color:#8a7e6a;margin-top:2px;font-weight:600;">RAISED</div></div>
+          <div style="background:#f2e6d3;border-radius:16px;padding:16px 8px;text-align:center;"><div style="font-family:'Instrument Serif',serif;font-size:26px;color:#c8613b;">500+</div><div style="font-size:10px;color:#8a7e6a;margin-top:2px;font-weight:600;">CAUSES</div></div>
+        </div>
+        <!-- STORY -->
+        <div style="padding:34px 22px 8px;">
+          <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#c8613b;font-weight:700;margin-bottom:12px;">How it began</div>
+          <p style="font-family:'Instrument Serif',serif;font-size:27px;line-height:1.28;margin:0 0 16px;">“The softest flutter of a wing can set off a chain reaction.”</p>
+          <p style="font-size:14.5px;line-height:1.65;color:#5c584f;margin:0;">Artist Tasha Wahl blended Gandhi's timeless call to action with Edward Lorenz's Butterfly Effect — sparking a worldwide movement of contagious generosity through interactive art.</p>
+        </div>
+        <!-- PROGRAMS -->
+        <div style="padding:32px 22px 8px;display:flex;flex-direction:column;gap:14px;">
+          <div style="background:#fff;border:1px solid #ece0cc;border-radius:20px;overflow:hidden;">
+            <div style="position:relative;height:150px;"><image-slot id="b-drops" shape="rect" placeholder="Butterfly Drop" style="position:absolute;inset:0;"></image-slot></div>
+            <div style="padding:16px 18px;">
+              <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#c8613b;font-weight:700;">Give unexpectedly</div>
+              <div style="font-family:'Instrument Serif',serif;font-size:24px;margin:2px 0 4px;">Butterfly Drops</div>
+              <p style="font-size:13.5px;color:#5c584f;margin:0;line-height:1.55;">Random acts of kindness left for strangers to find.</p>
+            </div>
+          </div>
+          <div style="background:#fff;border:1px solid #ece0cc;border-radius:20px;overflow:hidden;">
+            <div style="position:relative;height:150px;"><image-slot id="b-social" shape="rect" placeholder="Social Butterfly installation" style="position:absolute;inset:0;"></image-slot></div>
+            <div style="padding:16px 18px;">
+              <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6b7150;font-weight:700;">Give together</div>
+              <div style="font-family:'Instrument Serif',serif;font-size:24px;margin:2px 0 4px;">Social Butterflies</div>
+              <p style="font-size:13.5px;color:#5c584f;margin:0;line-height:1.55;">Public art installations that fuel social-media giving.</p>
+            </div>
+          </div>
+        </div>
+        <!-- CTA -->
+        <div style="margin:36px 0 0;padding:38px 24px;background:#c8613b;color:#fbf6ec;text-align:center;">
+          <h3 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:30px;margin:0 0 10px;">Start a ripple today</h3>
+          <p style="font-size:14px;color:rgba(251,246,236,0.85);margin:0 0 20px;">Every flutter counts. Yours could be next.</p>
+          <a href="#1b" style="display:block;background:#fbf6ec;color:#c8613b;font-weight:800;padding:16px;border-radius:14px;text-decoration:none;">Donate now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ OPTION 1C · BOLD KINETIC ============ -->
+    <div id="1c" style="flex:0 0 auto;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <span style="font-family:'Space Grotesk',monospace;font-weight:700;font-size:14px;background:#0d0d0f;color:#c6f24e;padding:5px 12px;border-radius:100px;">1c</span>
+        <div>
+          <div style="font-weight:800;font-size:15px;color:#26241f;">Bold &amp; Kinetic</div>
+          <div style="font-size:13px;color:#8a8578;">Activist energy — for young people &amp; movement-building</div>
+        </div>
+      </div>
+      <div class="phone" style="width:392px;height:840px;overflow-y:auto;border-radius:44px;background:#0d0d0f;box-shadow:0 40px 80px -30px rgba(0,0,0,0.6),0 0 0 11px #000,0 0 0 12px #2a2a2e;font-family:'Space Grotesk',sans-serif;color:#f4f4ec;">
+        <!-- NAV -->
+        <div style="padding:18px 22px;display:flex;align-items:center;justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:9px;">
+            <svg width="26" height="26" viewBox="0 0 32 32" fill="none" style="animation:bfFloat 4.5s ease-in-out infinite;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#c6f24e"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#c6f24e"/><rect x="15.2" y="7" width="1.6" height="18" rx="0.8" fill="#0d0d0f"/></svg>
+            <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:16px;letter-spacing:-0.02em;">BUTTERFLY EFFECT</span>
+          </div>
+          <a href="#1c" style="font-family:'Space Grotesk';font-weight:700;font-size:13px;background:#c6f24e;color:#0d0d0f;padding:8px 14px;border-radius:100px;text-decoration:none;">Donate</a>
+        </div>
+        <!-- HERO -->
+        <div style="padding:24px 22px 10px;">
+          <div style="font-family:'Space Grotesk';font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#c6f24e;margin-bottom:18px;">Grassroots · Global · Since 2013</div>
+          <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:52px;line-height:0.92;letter-spacing:-0.03em;margin:0 0 18px;text-transform:uppercase;">Be the <span style="color:#c6f24e;">change.</span></h2>
+          <p style="font-size:16px;line-height:1.55;color:#b7b7ad;margin:0 0 24px;max-width:300px;">One small flutter. A chain reaction of generosity. Philanthropy, rewired for everyone.</p>
+          <a href="#1c" style="display:flex;align-items:center;justify-content:space-between;background:#c6f24e;color:#0d0d0f;font-family:'Bricolage Grotesque';font-weight:800;font-size:18px;padding:16px 22px;border-radius:16px;text-decoration:none;text-transform:uppercase;">Learn the story <span style="font-size:22px;">→</span></a>
+        </div>
+        <div style="position:relative;height:230px;margin:16px 22px 0;border-radius:20px;overflow:hidden;">
+          <image-slot id="c-hero" shape="rect" placeholder="Social Butterfly installation" style="position:absolute;inset:0;"></image-slot>
+          <div style="position:absolute;left:0;bottom:0;background:#c6f24e;color:#0d0d0f;font-family:'Bricolage Grotesque';font-weight:800;font-size:13px;padding:8px 14px;border-radius:0 14px 0 0;">MALL OF AMERICA →</div>
+        </div>
+        <!-- MARQUEE STATS -->
+        <div style="margin:26px 0 0;padding:22px 0;border-top:1.5px solid #26262b;border-bottom:1.5px solid #26262b;">
+          <div style="display:flex;justify-content:space-around;text-align:center;">
+            <div><div style="font-family:'Bricolage Grotesque';font-weight:800;font-size:30px;color:#c6f24e;">5,386</div><div style="font-size:10px;letter-spacing:0.1em;color:#8a8a82;margin-top:2px;">DROPS</div></div>
+            <div><div style="font-family:'Bricolage Grotesque';font-weight:800;font-size:30px;color:#c6f24e;">$320K</div><div style="font-size:10px;letter-spacing:0.1em;color:#8a8a82;margin-top:2px;">RAISED</div></div>
+            <div><div style="font-family:'Bricolage Grotesque';font-weight:800;font-size:30px;color:#c6f24e;">500+</div><div style="font-size:10px;letter-spacing:0.1em;color:#8a8a82;margin-top:2px;">CAUSES</div></div>
+          </div>
+        </div>
+        <!-- STORY -->
+        <div style="padding:34px 22px 8px;">
+          <p style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:26px;line-height:1.15;margin:0 0 16px;letter-spacing:-0.02em;">The softest flutter of a wing can set off a chain reaction that produces <span style="color:#c6f24e;">major change.</span></p>
+          <p style="font-size:14.5px;line-height:1.65;color:#b7b7ad;margin:0;">Founder Tasha Wahl fused Gandhi with the Butterfly Effect and built a movement of contagious generosity through interactive art.</p>
+        </div>
+        <!-- PROGRAMS -->
+        <div style="padding:32px 22px 8px;display:flex;flex-direction:column;gap:12px;">
+          <a href="#1c" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:14px;background:#161619;border:1px solid #26262b;border-radius:18px;padding:14px;">
+            <div style="position:relative;width:88px;height:88px;border-radius:12px;overflow:hidden;flex:0 0 auto;"><image-slot id="c-drops" shape="rect" placeholder="Drop" style="position:absolute;inset:0;"></image-slot></div>
+            <div><div style="font-size:10px;letter-spacing:0.14em;color:#c6f24e;">GIVE UNEXPECTEDLY</div><div style="font-family:'Bricolage Grotesque';font-weight:800;font-size:20px;margin:2px 0;">Butterfly Drops</div><div style="font-size:12.5px;color:#8a8a82;">Kindness, left in the wild.</div></div>
+          </a>
+          <a href="#1c" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:14px;background:#161619;border:1px solid #26262b;border-radius:18px;padding:14px;">
+            <div style="position:relative;width:88px;height:88px;border-radius:12px;overflow:hidden;flex:0 0 auto;"><image-slot id="c-social" shape="rect" placeholder="Installation" style="position:absolute;inset:0;"></image-slot></div>
+            <div><div style="font-size:10px;letter-spacing:0.14em;color:#c6f24e;">GIVE TOGETHER</div><div style="font-family:'Bricolage Grotesque';font-weight:800;font-size:20px;margin:2px 0;">Social Butterflies</div><div style="font-size:12.5px;color:#8a8a82;">Public art that sparks giving.</div></div>
+          </a>
+        </div>
+        <!-- CTA -->
+        <div style="margin:34px 22px 26px;position:relative;overflow:hidden;background:#c6f24e;color:#0d0d0f;border-radius:24px;padding:34px 24px;text-align:center;">
+          <span style="position:absolute;width:120px;height:120px;border-radius:50%;background:rgba(13,13,15,0.08);top:20px;left:50%;margin-left:-60px;animation:bfRipple 3s ease-out infinite;"></span>
+          <div style="position:relative;">
+            <h3 style="font-family:'Bricolage Grotesque';font-weight:800;font-size:30px;margin:0 0 8px;text-transform:uppercase;letter-spacing:-0.02em;">Start a ripple</h3>
+            <p style="font-size:14px;margin:0 0 20px;font-weight:500;">Be the flutter that changes everything.</p>
+            <a href="#1c" style="display:block;background:#0d0d0f;color:#c6f24e;font-family:'Bricolage Grotesque';font-weight:800;padding:16px;border-radius:100px;text-decoration:none;text-transform:uppercase;">Donate now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</x-dc>
+</body>
+</html>

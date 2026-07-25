@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  a { color: #e0715c; }
+  a:hover { color: #c85338; }
+  /* hoverfx */
+  a, button { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, filter .2s ease; }
+  [style*="border-radius:100px"],[style*="border-radius: 100px"],button { cursor: pointer; }
+  [style*="border-radius:100px"]:hover,[style*="border-radius: 100px"]:hover,button:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 30px -10px rgba(26,20,64,0.55); }
+  [style*="border-radius:100px"]:active,[style*="border-radius: 100px"]:active,button:active { transform: translateY(-1px) scale(0.99); }
+  nav a:not([style*="border-radius:100px"]):not([style*="border-radius: 100px"]):hover { color: #e0715c !important; border-bottom-color: #e0715c !important; }
+  footer a:hover { color: #f7f0e4; }
+  a[style*="rgb(26, 20, 64)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#1a1440"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #e0715c !important; color: #fff !important; }
+  a[style*="rgb(47, 208, 198)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#2fd0c6"]:not(.bf-nav-link):not(.bf-logo-link):hover, button:hover { background: #1a1440 !important; color: #fff !important; }
+  a[style*="rgb(224, 113, 92)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#e0715c"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #c85338 !important; color: #fff !important; }
+  a[style*="rgb(245, 196, 81)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#f5c451"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #2fd0c6 !important; color: #0f3b3a !important; }
+  a[style*="3px solid rgb(26, 20, 64)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="border:3px solid #1a1440"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #1a1440 !important; color: #fff !important; }
+  a[style*="rgb(247, 240, 228)"][style*="1.5px"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="border:1.5px solid rgba(247,240,228"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: transparent !important; color: #fff !important; border: 3px solid #fff !important; }
+
+  @keyframes moaFadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes moaPopIn { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
+
+  .moa-tile { position: relative; border-radius: 16px; overflow: hidden; cursor: pointer; background: #1a1440; }
+  .moa-tile img { transition: transform .5s ease; display: block; width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+  .moa-tile:hover img { transform: scale(1.08); }
+  .moa-tile .moa-overlay { position: absolute; inset: 0; background: linear-gradient(180deg,rgba(26,20,64,0) 50%,rgba(26,20,64,0.55) 100%); opacity: 0; transition: opacity .3s ease; display: flex; align-items: flex-end; justify-content: flex-end; padding: 12px; }
+  .moa-tile:hover .moa-overlay { opacity: 1; }
+  .moa-tile .moa-zoom { width: 34px; height: 34px; border-radius: 50%; background: rgba(247,240,228,0.95); display: flex; align-items: center; justify-content: center; font-size: 15px; transform: translateY(6px); transition: transform .3s ease; }
+  .moa-tile:hover .moa-zoom { transform: translateY(0); }
+
+  .moa-lightbox-backdrop { position: fixed; inset: 0; background: rgba(15,10,32,0.92); z-index: 200; display: flex; align-items: center; justify-content: center; animation: moaFadeIn .2s ease; }
+  .moa-lightbox-img-wrap { animation: moaPopIn .25s ease; }
+  .moa-nav-btn { background: rgba(247,240,228,0.12); border: 1px solid rgba(247,240,228,0.25); color: #f7f0e4; }
+  .moa-nav-btn:hover { background: rgba(247,240,228,0.22) !important; }
+
+  @media (max-width: 640px) {
+    .moa-lightbox-arrow { display: none !important; }
+  }
+</style>
+</helmet>
+<div style="background:#f7f0e4;font-family:'Manrope',sans-serif;color:#1a1440;">
+  <dc-import name="SiteNav" active="social" hint-size="100%,72px"></dc-import>
+
+  <!-- HEADER -->
+  <div style="max-width:900px;margin:0 auto;padding:clamp(36px,5.5vw,56px) clamp(20px,5vw,40px) 0;">
+    <a href="/social-butterflies" style="display:inline-flex;align-items:center;gap:8px;font-family:'Space Grotesk',monospace;font-size:13px;font-weight:700;color:#e0715c;text-decoration:none;margin-bottom:22px;">&#8592; Back to Social Butterflies</a>
+    <div style="display:inline-block;font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#fff;font-weight:700;background:linear-gradient(135deg,#4a1f63,#9c3a86,#e0715c);padding:8px 16px;border-radius:100px;margin-bottom:20px;">Featured installation</div>
+    <h1 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(36px,6.5vw,58px);line-height:1.02;margin:0 0 16px;">Mall of America</h1>
+    <p style="font-size:17.5px;line-height:1.6;color:#5c5470;margin:0 0 32px;max-width:640px;">5,000 hand-decorated butterflies, one giant installation, and thousands of visitors moved by the stories behind them.</p>
+  </div>
+
+  <!-- HERO IMAGE -->
+  <div style="max-width:1100px;margin:0 auto;padding:0 clamp(20px,5vw,40px);">
+    <div class="moa-tile" onclick="{{ openLightbox0 }}" style="height:clamp(320px,52vw,480px);box-shadow:0 30px 60px -24px rgba(26,20,64,0.45);">
+      <img src="/assets/mall-of-america/13a.jpg" alt="Mall of America Social Butterfly installation">
+      <div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div>
+    </div>
+  </div>
+
+  <!-- STAT STRIP -->
+  <div style="max-width:1100px;margin:clamp(28px,4vw,40px) auto 0;padding:0 clamp(20px,5vw,40px);">
+    <div style="background:linear-gradient(135deg,#4a1f63 0%,#9c3a86 46%,#e0715c 100%);border-radius:24px;padding:clamp(28px,4vw,40px);display:flex;justify-content:space-around;flex-wrap:wrap;gap:24px;text-align:center;color:#f7f0e4;">
+      <div><div style="font-family:'DM Serif Display',serif;font-size:clamp(28px,4.5vw,40px);color:#f5c451;">5,000</div><div style="font-size:12px;letter-spacing:0.08em;color:rgba(247,240,228,0.75);margin-top:4px;">BUTTERFLY DROPS</div></div>
+      <div><div style="font-family:'DM Serif Display',serif;font-size:clamp(28px,4.5vw,40px);color:#2fd0c6;">1</div><div style="font-size:12px;letter-spacing:0.08em;color:rgba(247,240,228,0.75);margin-top:4px;">GIANT INSTALLATION</div></div>
+      <div><div style="font-family:'DM Serif Display',serif;font-size:clamp(28px,4.5vw,40px);color:#fff;">&#8734;</div><div style="font-size:12px;letter-spacing:0.08em;color:rgba(247,240,228,0.75);margin-top:4px;">STORIES OF HOPE</div></div>
+    </div>
+  </div>
+
+  <!-- DESCRIPTION -->
+  <div style="max-width:1100px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px) clamp(16px,3vw,24px);display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(28px,5vw,56px);align-items:start;">
+    <div>
+      <div style="font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#e0715c;font-weight:700;margin-bottom:12px;">The partnership</div>
+      <p style="font-size:18px;line-height:1.75;color:#3a3358;margin:0;">The Butterfly Effect partnered with the American Cancer Society and the Mall of America to conduct 5,000 Butterfly Drops at Race for the Cure events worldwide. Each person who found a butterfly artistically decorated the front and wrote their personal cancer story on the back. These heartfelt stories transformed the butterflies into powerful symbols of hope and resilience.</p>
+    </div>
+    <div>
+      <div style="font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#9c3a86;font-weight:700;margin-bottom:12px;">The installation</div>
+      <p style="font-size:18px;line-height:1.75;color:#3a3358;margin:0;">The decorated butterflies were collected and assembled by Tasha and her team into a stunning large-scale installation displayed at the Mall of America. As people walked through, they were deeply moved by the shared experiences of survivors, caregivers, and those affected by cancer — a vibrant testament to the strength and unity of the community.</p>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(32px,5vw,48px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:22px;flex-wrap:wrap;gap:10px;">
+      <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:28px;margin:0;">From the installation</h2>
+      <span style="font-size:13px;color:#8a8069;font-family:'Space Grotesk',monospace;">20 photos &middot; click any photo to view larger</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;">
+      <div class="moa-tile" onclick="{{ openLightbox1 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/1a.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox2 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/2a-705x210-1.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox3 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/3a.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox4 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/4a.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox5 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/5a.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox6 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/6a.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox7 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/7a-705x365-1.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox8 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/8a.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox9 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/9a.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox10 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/10a.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox11 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/11a-705x156-1.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox12 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/12a.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox13 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/14a.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox14 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/15a.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox15 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/unnamed-1-2-705x529-1.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox16 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/unnamed-2-2-529x705-1.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox17 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/unnamed-9-2-705x529-1.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox18 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/unnamed-10-1-529x705-1.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+      <div class="moa-tile" onclick="{{ openLightbox19 }}" style="aspect-ratio:3/2;"><img src="/assets/mall-of-america/unnamed-15-2.jpg" alt="Mall of America installation photo"><div class="moa-overlay"><div class="moa-zoom">&#128269;</div></div></div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="max-width:1180px;margin:0 auto 64px;padding:0 40px;">
+    <div style="background:linear-gradient(135deg,#4a1f63 0%,#9c3a86 46%,#e0715c 100%);border-radius:30px;padding:56px 48px;color:#f7f0e4;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;">
+      <div style="max-width:520px;">
+        <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(26px,4.2vw,34px);line-height:1.1;margin:0 0 10px;">Bring a Social Butterfly to your community</h2>
+        <p style="font-size:15.5px;color:rgba(247,240,228,0.8);margin:0;">Schools, communities and companies can host their own installation and raise up to $2,000 for a cause.</p>
+      </div>
+      <a href="/partner" style="background:#2fd0c6;color:#0f3b3a;font-weight:800;font-size:16px;padding:16px 32px;border-radius:100px;text-decoration:none;white-space:nowrap;">Become a partner</a>
+    </div>
+  </div>
+
+  <dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+
+  <!-- LIGHTBOX -->
+  <sc-if value="{{ lightboxOpen }}">
+    <div class="moa-lightbox-backdrop" onclick="{{ closeLightbox }}">
+      <button onclick="{{ closeLightbox }}" style="position:absolute;top:24px;right:24px;width:44px;height:44px;border-radius:50%;border:none;font-size:18px;" class="moa-nav-btn">&#10005;</button>
+      <div style="position:absolute;top:24px;left:24px;font-family:'Space Grotesk',monospace;font-size:13px;color:rgba(247,240,228,0.85);">{{ lightboxCounter }}</div>
+      <button onclick="{{ prevPhoto }}" class="moa-lightbox-arrow moa-nav-btn" style="position:absolute;left:24px;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;font-size:22px;">&#8592;</button>
+      <div class="moa-lightbox-img-wrap" onclick="{{ stopProp }}" style="max-width:88vw;max-height:82vh;">
+        <img src="{{ lightboxSrc }}" alt="Mall of America installation photo" style="max-width:88vw;max-height:82vh;object-fit:contain;border-radius:10px;box-shadow:0 30px 70px rgba(0,0,0,0.5);display:block;">
+      </div>
+      <button onclick="{{ nextPhoto }}" class="moa-lightbox-arrow moa-nav-btn" style="position:absolute;right:24px;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;font-size:22px;">&#8594;</button>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.photos = [
+      'assets/mall-of-america/13a.jpg',
+      'assets/mall-of-america/1a.jpg',
+      'assets/mall-of-america/2a-705x210-1.jpg',
+      'assets/mall-of-america/3a.jpg',
+      'assets/mall-of-america/4a.jpg',
+      'assets/mall-of-america/5a.jpg',
+      'assets/mall-of-america/6a.jpg',
+      'assets/mall-of-america/7a-705x365-1.jpg',
+      'assets/mall-of-america/8a.jpg',
+      'assets/mall-of-america/9a.jpg',
+      'assets/mall-of-america/10a.jpg',
+      'assets/mall-of-america/11a-705x156-1.jpg',
+      'assets/mall-of-america/12a.jpg',
+      'assets/mall-of-america/14a.jpg',
+      'assets/mall-of-america/15a.jpg',
+      'assets/mall-of-america/unnamed-1-2-705x529-1.jpg',
+      'assets/mall-of-america/unnamed-2-2-529x705-1.jpg',
+      'assets/mall-of-america/unnamed-9-2-705x529-1.jpg',
+      'assets/mall-of-america/unnamed-10-1-529x705-1.jpg',
+      'assets/mall-of-america/unnamed-15-2.jpg',
+    ];
+    this.state = { open: false, index: 0 };
+  }
+  componentDidMount() {
+    this._onKey = (e) => {
+      if (!this.state.open) return;
+      if (e.key === 'Escape') this.setState({ open: false });
+      if (e.key === 'ArrowRight') this.setState((s) => ({ index: (s.index + 1) % this.photos.length }));
+      if (e.key === 'ArrowLeft') this.setState((s) => ({ index: (s.index - 1 + this.photos.length) % this.photos.length }));
+    };
+    document.addEventListener('keydown', this._onKey);
+  }
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this._onKey);
+  }
+  renderVals() {
+    const total = this.photos.length;
+    const open = (i) => () => this.setState({ open: true, index: i });
+    const vals = {
+      lightboxOpen: this.state.open,
+      lightboxSrc: this.photos[this.state.index] || this.photos[0],
+      lightboxCounter: (this.state.index + 1) + ' / ' + total,
+      closeLightbox: () => this.setState({ open: false }),
+      stopProp: (e) => e && e.stopPropagation && e.stopPropagation(),
+      prevPhoto: (e) => { e && e.stopPropagation && e.stopPropagation(); this.setState((s) => ({ index: (s.index - 1 + total) % total })); },
+      nextPhoto: (e) => { e && e.stopPropagation && e.stopPropagation(); this.setState((s) => ({ index: (s.index + 1) % total })); },
+    };
+    for (let i = 0; i < total; i++) {
+      vals['openLightbox' + i] = open(i);
+    }
+    return vals;
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  a { color: #e0715c; }
+  a:hover { color: #c85338; }
+  /* hoverfx */
+  a, button { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, filter .2s ease; }
+  [style*="border-radius:100px"],[style*="border-radius: 100px"],button { cursor: pointer; }
+  [style*="border-radius:100px"]:hover,[style*="border-radius: 100px"]:hover,button:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 30px -10px rgba(26,20,64,0.55); }
+  [style*="border-radius:100px"]:active,[style*="border-radius: 100px"]:active,button:active { transform: translateY(-1px) scale(0.99); }
+  nav a:not([style*="border-radius:100px"]):not([style*="border-radius: 100px"]):hover { color: #e0715c !important; border-bottom-color: #e0715c !important; }
+  footer a:hover { color: #f7f0e4; }
+  /* button color swaps on hover — covers serialized rgb() (DC) + raw hex (standalone) */
+  a[style*="rgb(26, 20, 64)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#1a1440"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #e0715c !important; color: #fff !important; }
+  a[style*="rgb(47, 208, 198)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#2fd0c6"]:not(.bf-nav-link):not(.bf-logo-link):hover, button:hover { background: #1a1440 !important; color: #fff !important; }
+  a[style*="rgb(224, 113, 92)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#e0715c"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #c85338 !important; color: #fff !important; }
+  a[style*="rgb(245, 196, 81)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#f5c451"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #2fd0c6 !important; color: #0f3b3a !important; }
+  a[style*="3px solid rgb(26, 20, 64)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="border:3px solid #1a1440"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #1a1440 !important; color: #fff !important; }
+  a[style*="rgb(247, 240, 228)"][style*="1.5px"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="border:1.5px solid rgba(247,240,228"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: transparent !important; color: #fff !important; border: 3px solid #fff !important; }
+</style>
+<script src="/image-slot.js"></script>
+</helmet>
+<div style="background:#f7f0e4;font-family:'Manrope',sans-serif;color:#1a1440;">
+  <dc-import name="SiteNav" active="media" hint-size="100%,72px"></dc-import>
+
+  <!-- HERO -->
+  <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:52px;align-items:center;padding:clamp(40px,6vw,64px) clamp(20px,5vw,40px) 52px;">
+    <div>
+      <div style="display:inline-block;font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#fff;font-weight:700;background:linear-gradient(135deg,#4a1f63,#9c3a86,#e0715c);padding:8px 16px;border-radius:100px;margin-bottom:24px;">Media &amp; press</div>
+      <h1 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(38px,7vw,60px);line-height:1.0;margin:0 0 18px;">Stories in flight</h1>
+      <p style="font-size:18px;line-height:1.65;color:#5c5470;margin:0;max-width:460px;">Films, interviews and podcasts on how one small idea became a worldwide movement of contagious generosity.</p>
+    </div>
+    <div style="position:relative;height:360px;border-radius:28px;overflow:hidden;box-shadow:0 26px 50px -28px rgba(26,20,64,0.5);">
+      <image-slot id="media-hero" src="uploads/Screenshot-2024-06-28-at-5.45.53-PM-1024x644.png" shape="rect" placeholder="Interview" style="position:absolute;inset:0;"></image-slot>
+    </div>
+  </div>
+
+  <!-- VIDEOS -->
+  <div style="max-width:1240px;margin:0 auto;padding:44px 40px 20px;">
+    <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(28px,4.6vw,38px);margin:0 0 28px;">Videos</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;">
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:20px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;background:#1a1440;"><iframe src="https://player.vimeo.com/video/240611985?h=29c191a3ea" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><div style="padding:16px 18px;"><div style="font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;">Art as Love</div><div style="font-size:13px;color:#8a8069;margin-top:4px;">How Social Butterfly installations bring communities together</div></div></div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:20px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;background:#1a1440;"><iframe src="https://player.vimeo.com/video/157626596?h=59d4feb098" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><div style="padding:16px 18px;"><div style="font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;">Butterfly Stories&hellip; Hope Takes Flight</div><div style="font-size:13px;color:#8a8069;margin-top:4px;">Making a positive impact!</div></div></div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:20px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;background:#1a1440;"><iframe src="https://player.vimeo.com/video/162140170?h=f4f8943a24" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><div style="padding:16px 18px;"><div style="font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;">Butterfly Stories&hellip; Hope Takes Flight</div><div style="font-size:13px;color:#8a8069;margin-top:4px;">Extended cut</div></div></div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:20px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;background:#1a1440;"><iframe src="https://player.vimeo.com/video/257814627?h=83096c610d" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><div style="padding:16px 18px;"><div style="font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;">If Not You, Then Who?</div><div style="font-size:13px;color:#8a8069;margin-top:4px;">A call to be the change you want to see</div></div></div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:20px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;background:#1a1440;"><iframe src="https://player.vimeo.com/video/257809698?h=14688742bf" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><div style="padding:16px 18px;"><div style="font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;">Finding Your &lsquo;Why&rsquo;</div><div style="font-size:13px;color:#8a8069;margin-top:4px;">Identifying causes close to your heart</div></div></div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:20px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;background:#1a1440;"><iframe src="https://player.vimeo.com/video/254260018?h=e0d21bd4d7" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><div style="padding:16px 18px;"><div style="font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;">Flutter of Wings</div><div style="font-size:13px;color:#8a8069;margin-top:4px;">How our Butterfly Effect works to create change</div></div></div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:20px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;background:#1a1440;"><iframe src="https://player.vimeo.com/video/232853612?h=932a63d626" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><div style="padding:16px 18px;"><div style="font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;">Tasha Wahl Sizzle Reel</div></div></div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:20px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;background:#1a1440;"><iframe src="https://player.vimeo.com/video/220418894?h=7e9ccfe4e1" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><div style="padding:16px 18px;"><div style="font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;">USC Cinematic Arts Interview</div><div style="font-size:13px;color:#8a8069;margin-top:4px;">Tasha Wahl of Butterfly Effect</div></div></div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:20px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;background:#1a1440;"><iframe src="https://player.vimeo.com/video/219337441?h=239536fcc7" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><div style="padding:16px 18px;"><div style="font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;">A Butterfly Observed</div><div style="font-size:13px;color:#8a8069;margin-top:4px;">How one small idea sparked worldwide change</div></div></div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:20px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;background:#1a1440;"><iframe src="https://player.vimeo.com/video/151814870?h=05256727fa" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><div style="padding:16px 18px;"><div style="font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;">Sizzle Reel 2016</div></div></div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:20px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;background:#1a1440;"><iframe src="https://player.vimeo.com/video/219338414?h=bf4abc0f2a" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><div style="padding:16px 18px;"><div style="font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;">How To Do a Social Butterfly Install</div></div></div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-radius:20px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;background:#1a1440;"><iframe src="https://player.vimeo.com/video/151733133?h=e4f7ff2534" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><div style="padding:16px 18px;"><div style="font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;">What is Butterfly Effect?</div><div style="font-size:13px;color:#8a8069;margin-top:4px;">A two-minute introduction to the movement</div></div></div>
+    </div>
+  </div>
+
+  <!-- PODCASTS -->
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,40px) 20px;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px;flex-wrap:wrap;gap:12px;">
+      <div>
+        <div style="font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#e0715c;font-weight:700;margin-bottom:10px;">Tune in</div>
+        <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(28px,4.6vw,38px);margin:0;">Podcasts</h2>
+      </div>
+      <span style="font-size:13px;color:#8a8069;font-family:'Space Grotesk',monospace;">4 episodes</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:22px;">
+      <div style="background:#fff;border:1px solid #efe6d4;border-left:5px solid #e0715c;border-radius:18px;padding:22px 24px;box-shadow:0 16px 32px -22px rgba(26,20,64,0.3);">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+          <span style="width:42px;height:42px;border-radius:50%;background:#fbe4dd;display:flex;align-items:center;justify-content:center;flex:0 0 auto;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e0715c" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"/><path d="M6 11a6 6 0 0 0 12 0M12 18v3"/></svg></span>
+          <div><div style="font-family:'Space Grotesk',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a8069;">Episode</div><div style="font-family:'DM Serif Display',serif;font-size:19px;line-height:1.25;">Great Big Eyes</div></div>
+        </div>
+        <iframe src="https://w.soundcloud.com/player/?visual=false&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F376044386&show_artwork=true&color=%23e0715c" width="100%" height="166" style="border:0;border-radius:12px;display:block;"></iframe>
+      </div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-left:5px solid #9c3a86;border-radius:18px;padding:22px 24px;box-shadow:0 16px 32px -22px rgba(26,20,64,0.3);">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+          <span style="width:42px;height:42px;border-radius:50%;background:#f4dcec;display:flex;align-items:center;justify-content:center;flex:0 0 auto;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9c3a86" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"/><path d="M6 11a6 6 0 0 0 12 0M12 18v3"/></svg></span>
+          <div><div style="font-family:'Space Grotesk',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a8069;">Episode</div><div style="font-family:'DM Serif Display',serif;font-size:19px;line-height:1.25;">Contemplify</div></div>
+        </div>
+        <iframe src="https://w.soundcloud.com/player/?visual=false&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F376049015&show_artwork=true&color=%239c3a86" width="100%" height="166" style="border:0;border-radius:12px;display:block;"></iframe>
+      </div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-left:5px solid #5b8fd6;border-radius:18px;padding:22px 24px;box-shadow:0 16px 32px -22px rgba(26,20,64,0.3);">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+          <span style="width:42px;height:42px;border-radius:50%;background:#e2ecfa;display:flex;align-items:center;justify-content:center;flex:0 0 auto;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5b8fd6" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"/><path d="M6 11a6 6 0 0 0 12 0M12 18v3"/></svg></span>
+          <div><div style="font-family:'Space Grotesk',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a8069;">Personal Growth with Greg Voisen</div><div style="font-family:'DM Serif Display',serif;font-size:19px;line-height:1.25;">The Power of Creativity and Failure</div></div>
+        </div>
+        <iframe src="https://w.soundcloud.com/player/?visual=false&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F847414105&show_artwork=true&color=%235b8fd6" width="100%" height="166" style="border:0;border-radius:12px;display:block;"></iframe>
+      </div>
+      <div style="background:#fff;border:1px solid #efe6d4;border-left:5px solid #f5c451;border-radius:18px;padding:22px 24px;box-shadow:0 16px 32px -22px rgba(26,20,64,0.3);">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+          <span style="width:42px;height:42px;border-radius:50%;background:#faf1da;display:flex;align-items:center;justify-content:center;flex:0 0 auto;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c99a2e" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"/><path d="M6 11a6 6 0 0 0 12 0M12 18v3"/></svg></span>
+          <div><div style="font-family:'Space Grotesk',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a8069;">Episode</div><div style="font-family:'DM Serif Display',serif;font-size:19px;line-height:1.25;">Power of Creativity and Failure</div></div>
+        </div>
+        <iframe src="https://player.simplecast.com/d4f17be4-6a83-4fee-9b4f-cf5fc3b5d394?dark=false" width="100%" height="200px" style="border:0;border-radius:12px;display:block;"></iframe>
+      </div>
+    </div>
+  </div>
+  <div style="height:76px;"></div>
+
+  <dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

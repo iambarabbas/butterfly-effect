@@ -1,0 +1,14 @@
+wrangler.jsonc
+worker.js
+package.json
+package-lock.json
+.gitignore
+.assetsignore
+.git
+.wrangler
+node_modules
+.thumbnail
+.DS_Store
+"Butterfly Effect Home.dc.html"
+"Butterfly Effect Home.html"
+"Butterfly Effect Home.standalone.html"
