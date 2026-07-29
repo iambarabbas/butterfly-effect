@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  a { color: #e0715c; }
+  a:hover { color: #c85338; }
+  a, button { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, filter .2s ease; }
+  [style*="border-radius:100px"],[style*="border-radius: 100px"],button { cursor: pointer; }
+  [style*="border-radius:100px"]:hover,[style*="border-radius: 100px"]:hover,button:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 30px -10px rgba(26,20,64,0.55); }
+  [style*="border-radius:100px"]:active,[style*="border-radius: 100px"]:active,button:active { transform: translateY(-1px) scale(0.99); }
+  nav a:not([style*="border-radius:100px"]):not([style*="border-radius: 100px"]):hover { color: #e0715c !important; border-bottom-color: #e0715c !important; }
+  footer a:hover { color: #f7f0e4; }
+  a[style*="rgb(26, 20, 64)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#1a1440"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #e0715c !important; color: #fff !important; }
+  a[style*="rgb(47, 208, 198)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#2fd0c6"]:not(.bf-nav-link):not(.bf-logo-link):hover, button:hover { background: #1a1440 !important; color: #fff !important; }
+  a[style*="rgb(224, 113, 92)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#e0715c"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #c85338 !important; color: #fff !important; }
+  a[style*="rgb(245, 196, 81)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#f5c451"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #2fd0c6 !important; color: #0f3b3a !important; }
+</style>
+<script src="/image-slot.js"></script>
+</helmet>
+<div style="background:#f7f0e4;font-family:'Manrope',sans-serif;color:#1a1440;">
+  <dc-import name="SiteNav" active="blog" hint-size="100%,72px"></dc-import>
+
+  <!-- POST HEADER -->
+  <div style="max-width:840px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,40px) 0;">
+    <a href="/blog" style="display:inline-flex;align-items:center;gap:8px;font-family:'Space Grotesk',monospace;font-size:13px;font-weight:700;color:#e0715c;text-decoration:none;margin-bottom:24px;">&#8592; Back to the blog</a>
+    <h1 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(32px,5.5vw,50px);line-height:1.05;margin:0 0 28px;">It Does Not Have to Be Perfect to Be Significant</h1>
+  </div>
+
+  <!-- HERO IMAGE -->
+  <div style="max-width:1000px;margin:0 auto;padding:0 clamp(20px,5vw,40px);">
+    <div style="position:relative;height:420px;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(26,20,64,0.4);">
+      <img src="/assets/blog/it-does-not-have-to-be-perfect-to-be-significant.jpg" alt="It Does Not Have to Be Perfect to Be Significant" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div style="max-width:760px;margin:0 auto;padding:clamp(40px,6vw,56px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);">
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">There were moments in Ecuador when I did not feel like my best self.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">I was exhausted from lack of sleep. I missed my family. I was frustrated by the food, the discomfort, and the loss of my normal routines. I could feel how quickly I moved from being the kind, strong version of myself into someone impatient, fearful, and ungracious.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">I was ashamed of that.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">I had imagined I would enter the Amazon ready for spiritual transformation. Instead, I often felt like I was simply trying to make it through the day.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">During one particularly difficult stretch, Erik sent me a message from home:</p>
+
+    <p style="font-family:'DM Serif Display',serif;font-size:clamp(22px,3.5vw,30px);line-height:1.4;color:#1a1440;margin:32px 0;padding:0 0 0 24px;border-left:4px solid #e0715c;font-style:italic;">"It does not need to be perfect to be significant."</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">I carried those words with me.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">We tend to imagine that meaningful experiences will feel meaningful while we are living them. We think courage will feel strong, faith will feel peaceful, and growth will feel inspiring.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">Often, they do not.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">Courage may feel like fear that keeps moving.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">Faith may feel like uncertainty that chooses not to give up.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">Growth may look like taking one imperfect step while every part of us wants to return to what is familiar.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">We can be so quick to dismiss what we are doing because we are not doing it beautifully. We think our effort does not count because we complained, struggled, doubted, or needed help along the way.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">But perfection is not the measure of significance.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">Sometimes the most important thing we do is simply stay present.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">We apologize and try again.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">We tell the truth.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">We breathe through one more difficult moment.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">We allow ourselves to be supported.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">We keep our hearts open, even when they are tired.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">Your kindness does not have to be flawless to matter.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">Your courage does not have to be fearless to count.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">Your contribution does not have to be enormous to create movement.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 0;font-style:italic;">What imperfect but significant step can you take today?</p>
+
+  </div>
+  <div style="height:40px;"></div>
+
+  <dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  a { color: #e0715c; }
+  a:hover { color: #c85338; }
+  a, button { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, filter .2s ease; }
+  [style*="border-radius:100px"]:hover,[style*="border-radius: 100px"]:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 30px -10px rgba(26,20,64,0.55); }
+  [style*="border-radius:100px"]:active,[style*="border-radius: 100px"]:active { transform: translateY(-1px) scale(0.99); }
+  nav a:not([style*="border-radius:100px"]):not([style*="border-radius: 100px"]):hover { color: #e0715c !important; border-bottom-color: #e0715c !important; }
+  footer a:hover { color: #f7f0e4; }
+  a[style*="rgb(26, 20, 64)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#1a1440"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #e0715c !important; color: #fff !important; }
+  a[style*="rgb(47, 208, 198)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#2fd0c6"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #1a1440 !important; color: #fff !important; }
+  a[style*="rgb(224, 113, 92)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#e0715c"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #c85338 !important; color: #fff !important; }
+
+  /* Masonry gallery */
+  .art-grid { columns: 4; column-gap: 16px; }
+  @media (max-width: 1100px) { .art-grid { columns: 3; } }
+  @media (max-width: 720px)  { .art-grid { columns: 2; } }
+  @media (max-width: 480px)  { .art-grid { columns: 1; } }
+  .art-item { break-inside: avoid; margin-bottom: 16px; border-radius: 16px; overflow: hidden; cursor: pointer; position: relative; display: block; }
+  .art-item img { width: 100%; height: auto; display: block; transition: transform .4s ease, filter .4s ease; }
+  .art-item:hover img { transform: scale(1.03); filter: brightness(0.88); }
+  .art-item .art-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(26,20,64,0.65) 100%); opacity: 0; transition: opacity .3s ease; pointer-events: none; }
+  .art-item:hover .art-overlay { opacity: 1; }
+
+  /* Video tiles in masonry */
+  .art-video { cursor: default; }
+  .art-video:hover img { transform: none; filter: none; }
+  .art-video-inner { position: relative; padding-bottom: 56.25%; height: 0; background: #1a1440; border-radius: 16px; overflow: hidden; }
+  .art-video-inner iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+  @keyframes bfFloat { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-8px) rotate(2deg); } }
+</style>
+</helmet>
+
+<div style="background:#f7f0e4;font-family:'Manrope',sans-serif;color:#1a1440;">
+  <dc-import name="SiteNav" active="art" hint-size="100%,72px"></dc-import>
+
+  <!-- HERO -->
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px) 20px;">
+    <div style="display:inline-block;font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#fff;font-weight:700;background:linear-gradient(135deg,#4a1f63,#9c3a86,#e0715c);padding:8px 16px;border-radius:100px;margin-bottom:24px;">Art &amp; Expression</div>
+    <h1 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(40px,8vw,66px);line-height:1.0;margin:0 0 16px;">The art of the movement.</h1>
+    <p style="font-size:18px;line-height:1.65;color:#5c5470;max-width:560px;margin:0 0 56px;">From the streets of London to the walls of Wynwood, butterflies have landed in the most unexpected places. Here's the art they left behind.</p>
+  </div>
+
+  <!-- GALLERY (photos + videos mixed) -->
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,7vw,80px) clamp(20px,5vw,40px);">
+    <div style="font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#e0715c;font-weight:700;margin-bottom:12px;">Gallery</div>
+    <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(28px,5vw,40px);margin:0 0 36px;">Art in the wild.</h2>
+    <div class="art-grid">
+      <div class="art-item" data-idx="0"><img src="/assets/art/422ace8c-e470-4abc-909b-b0ac58ff4e44.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="1"><img src="/assets/art/a3164eb8-fc15-4803-b156-8c7d81723171.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="2"><img src="/assets/art/fullsizerender.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="3"><img src="/assets/art/fullsizerender-2.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="4"><img src="/assets/art/fullsizerender-3.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="5"><img src="/assets/art/fullsizerender-4.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="6"><img src="/assets/art/fullsizerender-5.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="7"><img src="/assets/art/fullsizerender-6.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item art-video"><div class="art-video-inner"><iframe src="https://player.vimeo.com/video/1213427198" title="Butterfly Effect video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div></div>
+      <div class="art-item" data-idx="8"><img src="/assets/art/img_0882.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="9"><img src="/assets/art/img_0919.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="10"><img src="/assets/art/img_1847.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="11"><img src="/assets/art/img_2251.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="12"><img src="/assets/art/img_2252.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="13"><img src="/assets/art/img_2255.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="14"><img src="/assets/art/img_2257.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="15"><img src="/assets/art/img_4151.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="16"><img src="/assets/art/img_4172.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="17"><img src="/assets/art/img_4954.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="18"><img src="/assets/art/img_5026.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item art-video"><div class="art-video-inner"><iframe src="https://player.vimeo.com/video/1213427536" title="Butterfly Effect video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div></div>
+      <div class="art-item" data-idx="19"><img src="/assets/art/img_5400.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="20"><img src="/assets/art/img_8579.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="21"><img src="/assets/art/img_9527.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="22"><img src="/assets/art/img_9671.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="23"><img src="/assets/art/london-drop-1.jpg" alt="London Drop" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="24"><img src="/assets/art/paris-butterfly-with-k-.jpg" alt="Paris Butterfly" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="25"><img src="/assets/art/art-1.png" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="26"><img src="/assets/art/art-2.png" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item" data-idx="27"><img src="/assets/art/art-3.png" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+      <div class="art-item art-video"><div class="art-video-inner"><iframe src="https://player.vimeo.com/video/1213427686" title="Butterfly Effect video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div></div>
+      <div class="art-item" data-idx="28"><img src="/assets/art/at.jpg" alt="Butterfly art" loading="lazy"><div class="art-overlay"></div></div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="background:linear-gradient(135deg,#4a1f63 0%,#9c3a86 46%,#e0715c 100%);padding:clamp(56px,7vw,80px) clamp(20px,5vw,40px);text-align:center;color:#f7f0e4;">
+    <svg width="38" height="38" viewBox="0 0 32 32" fill="none" style="margin-bottom:20px;animation:bfFloat 6s ease-in-out infinite;"><path d="M16 16C13 7 7 4 4 6c-3 2-2 10 2 12 3.2 1.6 7-0.5 10-2z" fill="#9c3a86"/><path d="M16 16c3-9 9-12 12-10 3 2 2 10-2 12-3.2 1.6-7-.5-10-2z" fill="#e0715c"/></svg>
+    <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(28px,5vw,44px);margin:0 0 16px;">Want to be part of the art?</h2>
+    <p style="font-size:17px;line-height:1.7;max-width:520px;margin:0 auto 32px;color:rgba(247,240,228,0.85);">Sponsor a butterfly drop and your act of generosity could end up on a wall, a street, or a stage anywhere in the world.</p>
+    <a href="/contact" style="background:#f7f0e4;color:#1a1440;font-weight:800;font-size:16px;padding:17px 36px;border-radius:100px;text-decoration:none;">Get involved</a>
+  </div>
+
+  <dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+
+<!-- LIGHTBOX — outside x-dc so script runs natively -->
+<style>
+  .bf-lightbox { position:fixed;inset:0;background:rgba(10,7,30,0.95);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .25s ease; }
+  .bf-lightbox.open { opacity:1;pointer-events:auto; }
+  .bf-lightbox img { max-width:92vw;max-height:88vh;border-radius:12px;box-shadow:0 40px 80px -20px rgba(0,0,0,0.8);display:block;object-fit:contain; }
+  .bf-lb-close { position:absolute;top:20px;right:24px;color:#fff;font-size:36px;cursor:pointer;line-height:1;opacity:0.7;background:none;border:none;font-family:sans-serif;padding:4px 8px; }
+  .bf-lb-close:hover { opacity:1; }
+  .bf-lb-prev,.bf-lb-next { position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.12);border:none;color:#fff;font-size:22px;width:52px;height:52px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s; }
+  .bf-lb-prev { left:16px; }
+  .bf-lb-next { right:16px; }
+  .bf-lb-prev:hover,.bf-lb-next:hover { background:rgba(255,255,255,0.28);transform:translateY(-50%); }
+  .bf-lb-counter { position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.5);font-size:13px;font-family:'Space Grotesk',monospace;letter-spacing:0.08em; }
+</style>
+<div class="bf-lightbox" id="bf-lightbox">
+  <button class="bf-lb-close" id="bf-lb-close">&#215;</button>
+  <button class="bf-lb-prev" id="bf-lb-prev">&#8592;</button>
+  <img id="bf-lb-img" src="" alt="Art">
+  <button class="bf-lb-next" id="bf-lb-next">&#8594;</button>
+  <div class="bf-lb-counter" id="bf-lb-counter"></div>
+</div>
+<script>
+(function() {
+  var images = [
+    '/assets/art/422ace8c-e470-4abc-909b-b0ac58ff4e44.jpg',
+    '/assets/art/a3164eb8-fc15-4803-b156-8c7d81723171.jpg',
+    '/assets/art/fullsizerender.jpg',
+    '/assets/art/fullsizerender-2.jpg',
+    '/assets/art/fullsizerender-3.jpg',
+    '/assets/art/fullsizerender-4.jpg',
+    '/assets/art/fullsizerender-5.jpg',
+    '/assets/art/fullsizerender-6.jpg',
+    '/assets/art/img_0882.jpg',
+    '/assets/art/img_0919.jpg',
+    '/assets/art/img_1847.jpg',
+    '/assets/art/img_2251.jpg',
+    '/assets/art/img_2252.jpg',
+    '/assets/art/img_2255.jpg',
+    '/assets/art/img_2257.jpg',
+    '/assets/art/img_4151.jpg',
+    '/assets/art/img_4172.jpg',
+    '/assets/art/img_4954.jpg',
+    '/assets/art/img_5026.jpg',
+    '/assets/art/img_5400.jpg',
+    '/assets/art/img_8579.jpg',
+    '/assets/art/img_9527.jpg',
+    '/assets/art/img_9671.jpg',
+    '/assets/art/london-drop-1.jpg',
+    '/assets/art/paris-butterfly-with-k-.jpg',
+    '/assets/art/art-1.png',
+    '/assets/art/art-2.png',
+    '/assets/art/art-3.png',
+    '/assets/art/at.jpg'
+  ];
+  var current = 0;
+  var lb = document.getElementById('bf-lightbox');
+  var lbImg = document.getElementById('bf-lb-img');
+  var lbCounter = document.getElementById('bf-lb-counter');
+  function show(idx) {
+    current = ((idx % images.length) + images.length) % images.length;
+    lbImg.src = images[current];
+    lbCounter.textContent = (current + 1) + ' / ' + images.length;
+  }
+  window.bfLightbox = {
+    open: function(idx) { show(idx); lb.classList.add('open'); document.body.style.overflow = 'hidden'; },
+    close: function() { lb.classList.remove('open'); document.body.style.overflow = ''; },
+    prev: function() { show(current - 1); },
+    next: function() { show(current + 1); }
+  };
+  document.addEventListener('click', function(e) {
+    var item = e.target.closest('[data-idx]');
+    if (item && !lb.classList.contains('open')) {
+      var idx = parseInt(item.getAttribute('data-idx'), 10);
+      if (!isNaN(idx)) bfLightbox.open(idx);
+    }
+  });
+  document.getElementById('bf-lb-close').onclick = function() { bfLightbox.close(); };
+  document.getElementById('bf-lb-prev').onclick = function(e) { e.stopPropagation(); bfLightbox.prev(); };
+  document.getElementById('bf-lb-next').onclick = function(e) { e.stopPropagation(); bfLightbox.next(); };
+  lb.addEventListener('click', function(e) { if (e.target === lb) bfLightbox.close(); });
+  document.addEventListener('keydown', function(e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') bfLightbox.close();
+    if (e.key === 'ArrowLeft') bfLightbox.prev();
+    if (e.key === 'ArrowRight') bfLightbox.next();
+  });
+})();
+</script>
+</body>
+</html>

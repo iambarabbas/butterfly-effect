@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  a { color: #e0715c; }
+  a:hover { color: #c85338; }
+  a, button { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, filter .2s ease; }
+  [style*="border-radius:100px"],[style*="border-radius: 100px"],button { cursor: pointer; }
+  [style*="border-radius:100px"]:hover,[style*="border-radius: 100px"]:hover,button:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 30px -10px rgba(26,20,64,0.55); }
+  [style*="border-radius:100px"]:active,[style*="border-radius: 100px"]:active,button:active { transform: translateY(-1px) scale(0.99); }
+  nav a:not([style*="border-radius:100px"]):not([style*="border-radius: 100px"]):hover { color: #e0715c !important; border-bottom-color: #e0715c !important; }
+  footer a:hover { color: #f7f0e4; }
+  a[style*="rgb(26, 20, 64)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#1a1440"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #e0715c !important; color: #fff !important; }
+  a[style*="rgb(47, 208, 198)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#2fd0c6"]:not(.bf-nav-link):not(.bf-logo-link):hover, button:hover { background: #1a1440 !important; color: #fff !important; }
+  a[style*="rgb(224, 113, 92)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#e0715c"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #c85338 !important; color: #fff !important; }
+  a[style*="rgb(245, 196, 81)"]:not(.bf-nav-link):not(.bf-logo-link):hover, a[style*="background:#f5c451"]:not(.bf-nav-link):not(.bf-logo-link):hover { background: #2fd0c6 !important; color: #0f3b3a !important; }
+</style>
+<script src="/image-slot.js"></script>
+</helmet>
+<div style="background:#f7f0e4;font-family:'Manrope',sans-serif;color:#1a1440;">
+  <dc-import name="SiteNav" active="blog" hint-size="100%,72px"></dc-import>
+
+  <!-- POST HEADER -->
+  <div style="max-width:840px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,40px) 0;">
+    <a href="/blog" style="display:inline-flex;align-items:center;gap:8px;font-family:'Space Grotesk',monospace;font-size:13px;font-weight:700;color:#e0715c;text-decoration:none;margin-bottom:24px;">&#8592; Back to the blog</a>
+    <h1 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(32px,5.5vw,50px);line-height:1.05;margin:0 0 28px;">What I Should Have Learned in Kindergarten but Learned at 47</h1>
+  </div>
+
+  <!-- HERO IMAGE -->
+  <div style="max-width:1000px;margin:0 auto;padding:0 clamp(20px,5vw,40px);">
+    <div style="position:relative;height:420px;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(26,20,64,0.4);">
+      <img src="/assets/blog/what-i-should-have-learned-in-kindergarten.jpg" alt="What I Should Have Learned in Kindergarten but Learned at 47" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div style="max-width:760px;margin:0 auto;padding:clamp(40px,6vw,56px) clamp(20px,5vw,40px) clamp(48px,6vw,72px);">
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">Before entering the Amazon, I packed milk for my coffee.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">I knew our supplies would be limited, and I was worried there would not be enough. Coffee is part of my morning ritual, and milk felt like one small comfort I could preserve in a place where nearly everything else would be unfamiliar.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">So I kept it for myself.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">I did not share it.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">By the time we reached our next lodge, the heat and altitude had spoiled every bit of it.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">My milk had gone sour.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">The lesson was almost too obvious.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">In trying to make sure I had enough, I had kept something from others and ended up with nothing. What could have been shared was wasted.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">I remember thinking, <em>Tasha, did you learn nothing in kindergarten?</em></p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">Apparently, I had not.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">Scarcity does strange things to us.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">When we are afraid there will not be enough, we hold tighter. We protect our portion. We convince ourselves that sharing now might leave us without what we need later.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">We do this with far more than food or money.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">We withhold encouragement because someone else's success makes us question our own.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">We hold back ideas because we want the credit.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">We protect our time, attention, connections, and resources because we are afraid giving them away will somehow diminish us.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">But so often, what we refuse to share does not become more valuable. It simply goes unused.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">Generosity is not only about how much we have. It is about how we relate to what is already in our hands.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">Sometimes we wait to give until we have more money, more time, more influence, more confidence, or more certainty. But generosity almost always begins before we feel completely ready.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">A meal becomes nourishment.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">An introduction becomes an opportunity.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">An encouraging word becomes courage.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">A small gift becomes evidence that someone has not been forgotten.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">The sour milk taught me something I should have learned long before I was 47.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">Protecting everything does not guarantee abundance.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 24px;">Sometimes abundance begins the moment we open our hands.</p>
+
+    <p style="font-size:19px;line-height:1.8;color:#3a3358;margin:0 0 0;font-style:italic;">What are you holding that was meant to be shared?</p>
+
+  </div>
+  <div style="height:40px;"></div>
+
+  <dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>
