@@ -58,10 +58,13 @@
     <div style="max-width:960px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,5vw,40px);">
       <div style="font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#e0715c;font-weight:700;margin-bottom:12px;text-align:center;">Watch</div>
       <h2 style="font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(26px,4vw,36px);text-align:center;margin:0 0 32px;color:#1a1440;">See Tasha on stage</h2>
-      <div style="border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(26,20,64,0.4);">
-        <video controls="controls" playsinline="playsinline" style="width:100%;display:block;background:#1a1440;" preload="metadata">
-          <source src="/assets/tasha-stage-intro.mp4" type="video/mp4">
-        </video>
+      <div id="stage-video-trigger" style="position:relative;cursor:pointer;border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(26,20,64,0.4);">
+        <img src="/assets/tasha-stage-poster.jpg" alt="Tasha Wahl on stage" style="width:100%;display:block;">
+        <div style="position:absolute;inset:0;background:rgba(26,20,64,0.2);display:flex;align-items:center;justify-content:center;">
+          <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#4a1f63,#9c3a86,#e0715c);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(0,0,0,0.5);">
+            <span style="color:#fff;font-size:26px;margin-left:5px;">&#9654;</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -180,5 +183,30 @@
   <dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
 </div>
 </x-dc>
+
+<!-- VIDEO MODAL (outside x-dc so native HTML video works) -->
+<div id="stage-video-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(6,6,11,0.88);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;">
+  <div style="width:min(960px,100%);position:relative;">
+    <button id="stage-video-close" style="position:absolute;top:-44px;right:0;background:none;border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:24px;cursor:pointer;line-height:1;width:36px;height:36px;border-radius:50%;">&#215;</button>
+    <video id="stage-video-player" controls style="width:100%;display:block;border-radius:14px;" preload="none">
+      <source src="/assets/tasha-stage-intro.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+<script>
+(function(){
+  var trigger = document.getElementById('stage-video-trigger');
+  var modal   = document.getElementById('stage-video-modal');
+  var player  = document.getElementById('stage-video-player');
+  var close   = document.getElementById('stage-video-close');
+  if(!trigger||!modal||!player) return;
+  function openModal(){ modal.style.display='flex'; player.play().catch(function(){}); }
+  function closeModal(){ modal.style.display='none'; player.pause(); }
+  trigger.addEventListener('click', openModal);
+  close.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+})();
+</script>
 </body>
 </html>
